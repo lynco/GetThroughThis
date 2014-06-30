@@ -1,29 +1,9 @@
 TestDk::Application.routes.draw do
-  # Added API and Doorkeeper
-  namespace :api, defaults: {format: 'json'} do
-    resources :tasks
-  end
-
-  use_doorkeeper
-
-  resources :categories
-
   resources :navbar_entries
-  resources :locations
-  resources :tasks
-  
   devise_for :users
-
   resources :users, path: 'profiles'
-  root to: 'tasks#index'
 
-  ResqueWeb::Engine.eager_load!
-  mount ResqueWeb::Engine => "/resque"
+  root to: 'welcome#index'
+  get "/search" => "search#results"
 
-  namespace :api do
-    namespace :v1 do
-
-
-    end
-  end
 end

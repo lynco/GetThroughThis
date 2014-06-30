@@ -1,0 +1,9 @@
+%h1 Search Results
+
+- @results.each_with_index do |res, index|
+  .row.simple-box
+    .col-lg-12
+      = "Result #{index+1}"
+    .col-lg-12
+      = link_to res.name, res.slug
+        

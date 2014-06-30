@@ -1,7 +1,3 @@
-.main {
-
-}
-
 span.flashmesgs { 
   background-color: pink;
   display: inline-block;
@@ -20,3 +16,11 @@ span.flashmesgs {
   background-color: #FCC;
   border: solid 1px #C66;
 }
+
+.simple-box {
+    border: 2px dotted black;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+
