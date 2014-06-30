@@ -1,4 +1,4 @@
-TestDk::Application.routes.draw do
+GetThroughThis::Application.routes.draw do
   resources :navbar_entries
   devise_for :users
   resources :users, path: 'profiles'
