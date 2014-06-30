@@ -60,6 +60,7 @@ gem 'formtastic'
 gem 'formtastic-bootstrap', github: 'mjbellantoni/formtastic-bootstrap'
 
 gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 group :development do
   # Use sqlite3 as the database for Active Record

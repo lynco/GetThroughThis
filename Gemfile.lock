@@ -85,6 +85,7 @@ GEM
       activesupport (> 3)
       elasticsearch (> 0.4)
       hashie
+    elasticsearch-rails (0.1.4)
     elasticsearch-transport (1.0.4)
       faraday
       multi_json
@@ -306,6 +307,7 @@ DEPENDENCIES
   devise
   doorkeeper
   elasticsearch-model
+  elasticsearch-rails
   email_spec
   factory_girl_rails
   formtastic
