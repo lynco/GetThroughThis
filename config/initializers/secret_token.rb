@@ -13,8 +13,8 @@
 # Better security - this won't let you use the secret key in production
 
 if Rails.env.production? then
-  raise TestDk::NoTokenException unless ENV['RAILS_SECRET_TOKEN']
-  TestDk::Application.config.secret_key_base = ENV['RAILS_SECRET_TOKEN']
+  raise GetThroughThis::NoTokenException unless ENV['RAILS_SECRET_TOKEN']
+  GetThroughThis::Application.config.secret_key_base = ENV['RAILS_SECRET_TOKEN']
 else
-  TestDk::Application.config.secret_key_base = '90f683d8b59aab69a4b274afa8cd730f2d0fe78b2a7f96bedd414689a14dca4bb2d7dcab5463c76bca95c1a87c77fcce05bc9cd8ce3832281f3ca3d8c8ec460e'
+  GetThroughThis::Application.config.secret_key_base = '90f683d8b59aab69a4b274afa8cd730f2d0fe78b2a7f96bedd414689a14dca4bb2d7dcab5463c76bca95c1a87c77fcce05bc9cd8ce3832281f3ca3d8c8ec460e'
 end
