@@ -1,0 +1,18 @@
+$logo-font: 'Open Sans', sans-serif;
+$logo-size: 36px;
+$logo-weight: 700;
+
+$grey: #484849;
+$offwhite: #fbfbfb;
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-family: $logo-font;
+  font-size: $logo-size;
+  font-weight: $logo-weight;
+  color: $grey;
+}
+
+.navbar-default {
+  background-color: $offwhite;
+}
