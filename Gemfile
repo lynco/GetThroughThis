@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4'
@@ -40,6 +40,7 @@ end
 gem 'gmaps4rails'
 
 gem 'geocoder'
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'devise'
 gem 'haml-rails'
@@ -53,9 +54,6 @@ group :production do
   gem 'pg'
   gem 'activerecord-postgresql-adapter'
 end
-
-gem 'therubyracer'
-gem 'less-rails'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'formtastic'
