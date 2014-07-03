@@ -1,10 +1,69 @@
-.row.simple-box
-  = form_tag("/search", method: "get", role: 'form') do
-    = label_tag :q, 'Search here:'
-    = text_field_tag :q, nil, class: 'form-control'
-
-.row.simple-box
-  %h2 Top Tags
-  - @top_tags.each do |tag_elt|
-    .col-lg-4
-      = tag_elt.name
+%main{id: "search"}
+  .container
+    .col-md-6
+      = image_tag("smartphone.jpg", class: "header-image")
+    .col-md-6
+      %h1{class: "headline"} When you’ve experienced a traumatic event and need help, finding the right resources is key.
+      %form{role: "form", class: "info-about"}
+        .form-group
+          %label{for: "info-about"} I need information about...
+          .input-group.left-inner-addon
+            %i{class: "glyphicon glyphicon-search"}
+            %input{name: "get-involved", type: "text", class: "form-control"}
+            %span{class: "input-group-btn"}
+              %button{class: "btn btn-primary", type: "button"} Help Me Out
+.sample-apps
+  .container
+    .col-md-3
+      %hr
+    .col-md-6
+      %h2.text-center Don’t know exactly what you’re searching for?
+      %h2.text-center Browse some of the resources that are available.
+    .col-md-3
+      %hr
+    .col-md-4
+      .content
+        = image_tag("lifesaver-icon.png", class: "center-block icon")
+        %h3{class: "icon-text text-center"} Safety
+        %p{class: "body-copy"} When something happens to you or you’re in a bad situation, there is a collection of mobile & web resources that address your immediate needs.
+        %p{class: "tag-text"} Related Tags
+        .tag-list
+          %span{class: "label tag-label"} safety
+          %span{class: "label tag-label"} app
+          %span{class: "label tag-label"} service
+          %span{class: "label tag-label"} web
+        %span{class: "input-group-btn"}
+          %button{class: "btn btn-primary", type: "button"} Browse Safety Apps
+    .col-md-4
+      .content
+        = image_tag("firstaid-icon.png", class: "center-block icon")
+        %h3{class: "icon-text text-center"} Well-Being
+        %p{class: "body-copy"} Every situation leaves behind a host of possible longterm effects and ongoing needs. Your health and well-being is critical to recovery.
+        %p{class: "tag-text"} Related Tags
+        .tag-list
+          %span{class: "label tag-label"} safety
+          %span{class: "label tag-label"} app
+          %span{class: "label tag-label"} service
+          %span{class: "label tag-label"} web
+        %span{class: "input-group-btn"}
+          %button{class: "btn btn-primary", type: "button"} Browse Health Services Apps
+    .col-md-4
+      .content
+        = image_tag("gavel-icon.png", class: "center-block icon")
+        %h3{class: "icon-text text-center"} Justice
+        %p{class: "body-copy"} One of the final stages in recovery means justice and making sure to address all your legal needs. Get help with the paperwork.
+        %p{class: "tag-text"} Related Tags        
+        .tag-list
+          %span{class: "label tag-label"} safety
+          %span{class: "label tag-label"} app
+          %span{class: "label tag-label"} service
+          %span{class: "label tag-label"} web
+        %span{class: "input-group-btn"}
+          %button{class: "btn btn-primary", type: "button"} Browse Legal Resources
+.info
+  .container
+    .col-md-offset-2.col-md-8
+      %h2.text-center Get Through This exists because CA families and communities need a resource to empower them during their recovery process.
+.sponsors
+  .container
+.separator

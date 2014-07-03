@@ -1,0 +1,148 @@
+#search {
+  height: 407px;
+  background-color: $beige;
+}
+
+.header-image {
+  padding-top: 65px;
+}
+
+.headline {
+  font-family: $primary-font;
+  font-size: 27px;
+  font-weight: 700px;
+  margin-top: 92px;
+}
+
+main .info-about {
+  font-family: $primary-font;
+  color: $lol-grey4;
+  font-size: 18px;
+  padding-top: 28px;
+}
+
+main .info-about label {
+  font-weight: 400; 
+}
+
+main .form-control {
+  height: 42px;
+  font-size: 18px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border-color: $lol-grey3; 
+  background-color: #fff;
+}
+
+.left-inner-addon {
+    position: relative;
+}
+
+.left-inner-addon input {
+    padding-left: 40px;    
+}
+
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.sample-apps .container {
+  height: 700px;
+}
+
+h2 {
+  font-family: $primary-font;
+  color: $lol-grey4;
+  font-size: 21px;
+}
+
+.sample-apps hr {
+  margin-top: 45px;
+  height: 0;
+  border-top: 2px solid $lol-grey5;
+  border-bottom: 2px solid $lol-grey5;
+}
+
+.sample-apps .col-md-4 {
+  margin-top: 25px;
+}
+
+.sample-apps .content {
+  height: 478px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.sample-apps .col-md-4:nth-child(3n + 1) {
+  background-color: $list-1;
+}
+
+.sample-apps .col-md-4:nth-child(3n + 2) {
+  background-color: $list-2;
+}
+
+.sample-apps .col-md-4:nth-child(3n) {
+  background-color: $list-3;
+}
+
+.sample-apps .icon {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sample-apps .icon-text {
+  font-family: $logo-font;
+  color: $blue;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.sample-apps .body-copy {
+  font-family: $primary-font;
+  color: $black;
+  font-size: 18px;
+  height: 125px;
+  border-bottom: 1px solid $lol-grey6;
+  margin-bottom: 8px;
+}
+
+.sample-apps .tag-text {
+  margin-top: 17px;
+  margin-bottom: 17px;
+  font-size: 14px;
+  font-family: $primary-font;
+  color: $black;
+}
+
+.sample-apps .tag-list {
+  margin-bottom: 33px;
+}
+.sample-apps .tag-label {
+  background-color: $lol-grey4;
+}
+
+.info {
+  height: 371px;
+  background-color: $lol-blue;
+}
+
+.info h2 {
+  font-weight: 700;
+}
+
+.sponsors {
+  height: 123px;
+  background-color: $blue;
+  border-bottom: 4px solid $offwhite;
+}
+
+.separator {
+  height: 8px;
+  background-color: $blue;
+}

@@ -1,0 +1,58 @@
+.btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 18px;
+  padding: 7px 8px;
+  font-family: $secondary-font;
+  text-transform: uppercase;
+}
+
+.btn-default {
+  color: #fff;
+  background-color: $blue;
+  border-color: $lol-grey2; 
+}
+
+.btn-default:hover {
+  color: #fff;
+  background-color: $dark-blue;
+  box-shadow: none;
+  border-color: $lol-grey2; 
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $orange;
+  border-color: $lol-grey3; 
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: $dark-orange;
+  box-shadow: none;
+  border-color: $lol-grey3; 
+}
+
+.btn-primary:after {
+   content: " ";
+   position: absolute;
+   z-index: 0;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   bottom: 0px;
+   border-bottom: 4px solid $dark-orange;
+}
+
+.btn-default:after {
+   content: " ";
+   position: absolute;
+   z-index: 0;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   bottom: 0px;
+   border-bottom: 4px solid $dark-blue;
+}

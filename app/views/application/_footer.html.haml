@@ -1,0 +1,17 @@
+%footer
+  .container
+    .col-md-offset-3.col-md-2
+      %ul.list-unstyled
+        %li= link_to 'Home', '#'
+        %li= link_to 'About Us', '#'
+        %li= link_to 'Get Involved', '#'
+    .col-md-1
+      .vertical-rule
+    .col-md-4
+      %form{role: "form", class: "get-involved"}
+        .form-group
+          %label{for: "get-involved"} Learn how to get involved
+          .input-group
+            %input{name: "get-involved", type: "text", class: "form-control", placeholder: "Email address"}
+            %span{class: "input-group-btn"}
+              %button{class: "btn btn-default", type: "button"} Count Me In
