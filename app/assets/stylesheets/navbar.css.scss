@@ -1,0 +1,32 @@
+nav.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-family: $logo-font;
+  font-size: 24px;
+  font-weight: 700;
+  color: $grey;
+  padding: 41px 0 41px;
+  height: 27px;
+  line-height: 0px;
+}
+
+.navbar {
+  border-bottom: 8px solid $light-grey;
+  background-color: $offwhite;
+}
+
+.navbar-nav {
+  display: inline-block;
+  position: relative;
+}
+
+.navbar-nav > li > a {
+  padding-top: 39px;
+  padding-bottom: 25px;
+  color: $grey;
+  font-family: $primary-font;
+  font-size: 18px;
+}
