@@ -9,6 +9,9 @@ gem 'rails', '~> 4'
 gem 'rails_12factor'
 gem 'thin'
 
+# Admin Interface
+gem 'rails_admin'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -69,14 +72,8 @@ group :development do
   gem 'sqlite3'
 end
 
-group :development do
-      
-  gem 'pry'
-  gem 'pry-remote'
-  gem 'pry-stack_explorer'
-
-  # This needs to be here, else 'rake spec' will output nothing.
-  gem 'rspec-rails'
+group :development, :test do
+  gem 'dotenv-rails'
 end
 
 #testing with rspec
@@ -94,3 +91,7 @@ end
 
 # Image uploading
 gem 'paperclip'
+
+# S3
+gem 'aws-sdk'
+

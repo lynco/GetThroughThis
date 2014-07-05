@@ -1,0 +1,16 @@
+.row.simple-box
+  .col-lg-12
+    = @web_service.title
+
+.row.simple-box
+  .col-lg-12
+    = raw @web_service.description
+
+.row.simple-box
+  .col-lg-12
+    %h1 
+      = t :related_services
+
+  - @web_service.related_resources.each do |rr|
+    .col-lg-12.simple-box
+      = link_to rr.title, rr

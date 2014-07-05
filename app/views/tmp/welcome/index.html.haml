@@ -1,0 +1,10 @@
+.row.simple-box
+  = form_tag("/search", method: "get", role: 'form') do
+    = label_tag :q, 'Search here:'
+    = text_field_tag :q, nil, class: 'form-control'
+
+.row.simple-box
+  %h2 Top Tags
+  - @top_tags.each do |tag_elt|
+    .col-lg-4
+      = tag_elt.name

@@ -1,0 +1,13 @@
+%h1 Search Results
+
+- @results.each_with_index do |res, index|
+  .row.simple-box
+    .col-lg-12
+      = "Result #{index+1}"
+    .col-lg-12
+      = link_to res.title, res
+
+    // Create a margin for the description
+    .col-lg-1 
+    .col-lg-11
+      = raw(res.description)

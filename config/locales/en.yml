@@ -26,3 +26,5 @@ en:
   errors_found: "Errors found"
   access_denied_message: "Please sign in to access that page."
   message_404: "You appear to want something that's not there."
+
+  related_services: "Related Services"

@@ -40,5 +40,19 @@ module GetThroughThis
       g.javascripts = false
       g.helper = false
     end
+
+    # Image uploads
+    config.paperclip_defaults = {
+      :url => ':s3_alias_url',
+      :s3_host_alias => ENV['CDN_HOST'],
+      :path => '/:imageable_class/:class/:style/:hash.:extension',
+      :storage => :s3,
+      :s3_credentials => {
+        :bucket => ENV['S3_BUCKET_NAME'],
+        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      }
+    }
+
   end
 end
