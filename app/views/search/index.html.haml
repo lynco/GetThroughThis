@@ -1,0 +1,78 @@
+.search
+  .container
+    %h1
+      %span 3
+      resources found for
+    %span{class: "label search-label"} safety
+    %hr
+    .row
+      .col-md-2
+        .configuration
+          .header.text-center
+            = image_tag("filter-icon.png", class: "filter")
+            Filter Results
+          .types
+            %h4 Type
+            %ul.list-unstyled
+              %li 
+                %input{type: "checkbox"} Mobile App
+              %li 
+                %input{type: "checkbox"} Web Resource
+              %li 
+                %input{type: "checkbox"} In-person Service
+          %span{class: "input-group-btn"}
+            %button.btn.btn-primary Filter
+        .configuration
+          .header.text-center
+            = image_tag("plus-icon.png", class: "filter")
+            Add Resource
+          .bottom
+            %p Are we missing something from these results?
+            %p Suggest a resource to add.
+          %span{class: "input-group-btn"}
+            %button.btn.btn-default Support
+
+      .col-md-10
+        .row
+          .col-md-6
+            .resource
+              .content
+                .icon
+                  = image_tag("app-icon.jpg")
+                .copy
+                  %h1 Circle of 6
+                  %p 
+                    With Circle of 6, you can connect with your friends to stay close, stay safe and prevent violence before it happens. The circle of 6 app
+                    %span.more ... more
+                  .labels 
+                    %span{class: "label filter-label"} safety
+                    %span{class: "label tag-label"} app 
+              %p.read-more Read More
+          .col-md-6
+            .resource
+              .content
+                .icon
+                  = image_tag("app-icon.jpg")
+                .copy
+                  %h1 Circle of 6
+                  %p 
+                    With Circle of 6, you can connect with your friends to stay close, stay safe and prevent violence before it happens. The circle of 6 app
+                    %span.more ... more
+                  .labels 
+                    %span{class: "label filter-label"} safety
+                    %span{class: "label tag-label"} app 
+              %p.read-more Read More
+          .col-md-6
+            .resource
+              .content
+                .icon
+                  = image_tag("app-icon.jpg")
+                .copy
+                  %h1 Circle of 6
+                  %p 
+                    With Circle of 6, you can connect with your friends to stay close, stay safe and prevent violence before it happens. The circle of 6 app
+                    %span.more ... more
+                  .labels 
+                    %span{class: "label filter-label"} safety
+                    %span{class: "label tag-label"} app 
+              %p.read-more Read More
