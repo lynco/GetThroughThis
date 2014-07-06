@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704004422) do
+ActiveRecord::Schema.define(version: 20140706184333) do
 
   create_table "images", force: true do |t|
     t.string   "name"
@@ -25,19 +25,19 @@ ActiveRecord::Schema.define(version: 20140704004422) do
     t.datetime "image_file_updated_at"
   end
 
-  create_table "language_web_services", force: true do |t|
-    t.integer "languages_id"
-    t.integer "web_services_id"
-  end
-
-  add_index "language_web_services", ["languages_id"], name: "index_language_web_services_on_languages_id"
-  add_index "language_web_services", ["web_services_id"], name: "index_language_web_services_on_web_services_id"
-
   create_table "languages", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "languages_web_services", force: true do |t|
+    t.integer "language_id"
+    t.integer "web_service_id"
+  end
+
+  add_index "languages_web_services", ["language_id"], name: "index_languages_web_services_on_language_id"
+  add_index "languages_web_services", ["web_service_id"], name: "index_languages_web_services_on_web_service_id"
 
   create_table "navbar_entries", force: true do |t|
     t.string   "title"
@@ -46,13 +46,19 @@ ActiveRecord::Schema.define(version: 20140704004422) do
     t.datetime "updated_at"
   end
 
-  create_table "tag_web_services", force: true do |t|
-    t.integer "tags_id"
-    t.integer "web_services_id"
+  create_table "service_use_modes", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "tag_web_services", ["tags_id"], name: "index_tag_web_services_on_tags_id"
-  add_index "tag_web_services", ["web_services_id"], name: "index_tag_web_services_on_web_services_id"
+  create_table "service_use_modes_web_services", force: true do |t|
+    t.integer "service_use_mode_id"
+    t.integer "web_service_id"
+  end
+
+  add_index "service_use_modes_web_services", ["service_use_mode_id"], name: "index_service_use_modes_web_services_on_service_use_mode_id"
+  add_index "service_use_modes_web_services", ["web_service_id"], name: "index_service_use_modes_web_services_on_web_service_id"
 
   create_table "tags", force: true do |t|
     t.string   "name"
@@ -60,6 +66,14 @@ ActiveRecord::Schema.define(version: 20140704004422) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "tags_web_services", force: true do |t|
+    t.integer "tag_id"
+    t.integer "web_service_id"
+  end
+
+  add_index "tags_web_services", ["tag_id"], name: "index_tags_web_services_on_tag_id"
+  add_index "tags_web_services", ["web_service_id"], name: "index_tags_web_services_on_web_service_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -84,20 +98,6 @@ ActiveRecord::Schema.define(version: 20140704004422) do
   create_table "web_service_relations", force: true do |t|
     t.integer "first_web_service_id"
     t.integer "second_web_service_id"
-  end
-
-  create_table "web_service_type_web_services", force: true do |t|
-    t.integer "web_service_types_id"
-    t.integer "web_services_id"
-  end
-
-  add_index "web_service_type_web_services", ["web_service_types_id"], name: "index_web_service_type_web_services_on_web_service_types_id"
-  add_index "web_service_type_web_services", ["web_services_id"], name: "index_web_service_type_web_services_on_web_services_id"
-
-  create_table "web_service_types", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "web_services", force: true do |t|
