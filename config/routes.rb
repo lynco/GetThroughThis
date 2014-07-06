@@ -8,4 +8,9 @@ GetThroughThis::Application.routes.draw do
   resources :search
 
   root to: 'welcome#index'
+
+  get "/search" => "search#results"
+
+  # Need a catch all to redirect to the errors controller, for catching 404s as an exception
+  match "*path", to: "errors#catch_404", via: [:get, :post]
 end
