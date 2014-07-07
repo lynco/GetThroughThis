@@ -1,3 +1,6 @@
+.search {
+  background-color: $offwhite2;
+}
 .search .container {
   padding-top: 35px; 
 }
@@ -19,7 +22,7 @@
   border: 1px solid $lol-grey7;
 }
 
-.search .header {
+.header {
   text-transform: uppercase;
   font-family: $logo-font;
   font-size: 15px;
@@ -42,8 +45,10 @@
 .header { 
  margin-bottom: 10px;
 }
+
 .configuration {
   margin-bottom: 15px;
+  background-color: #fff;
 }
 
 .types, .bottom {
@@ -120,11 +125,11 @@
   float: left;
 }
 
-.resource .filter-label {
+.filter-label {
   background-color: $lol-grey8;
 }
 
-.resource .tag-label {
+.tag-label {
   background-color: $lol-grey4;
 }
 
