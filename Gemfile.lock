@@ -323,8 +323,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-postgresql-adapter
-  bootstrap-sass (~> 3.2.0)
   aws-sdk
+  bootstrap-sass (~> 3.2.0)
   cancan
   capybara
   coffee-rails (~> 4.0.0)

@@ -20,10 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  site_title: "A Basic Rails App"
+  site_title: "Get Through This"
+  brand_name: "Get Through This"
   successful_resource_creation: "Resource successfully created"
   successful_resource_update: "Resource successfully updated"
-  errors_found: "Errors found"
+  errors_found: "Errors found."
   access_denied_message: "Please sign in to access that page."
   message_404: "Sorry, that page is not available. We will look into it!"
 

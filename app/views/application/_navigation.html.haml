@@ -10,7 +10,6 @@
         %span.icon-bar
     .collapse.navbar-collapse{id: "bs-example-navbar-collapse-1"}
       %ul.nav.navbar-nav
-        %li= link_to 'Home', '#'
-        %li= link_to 'About Us', '#'
-        %li= link_to 'FAQ', '#'
-        %li= link_to 'For Developers', '#'
+        - @navbar_entries.each do |entry|
+          %li
+            = link_to entry[:title], entry[:url]

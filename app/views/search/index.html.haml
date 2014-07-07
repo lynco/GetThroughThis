@@ -1,9 +1,11 @@
 .search
   .container
     %h1
-      %span 3
+      %span 
+        = @results.count
       resources found for
-    %span{class: "label search-label"} safety
+    %span{class: "label search-label"} 
+      = session[:search_query]
     %hr
     .row
       .col-md-2
@@ -34,45 +36,20 @@
 
       .col-md-10
         .row
-          .col-md-6
-            .resource
-              .content
-                .icon
-                  = image_tag("app-icon.jpg")
-                .copy
-                  %h1 Circle of 6
-                  %p 
-                    With Circle of 6, you can connect with your friends to stay close, stay safe and prevent violence before it happens. The circle of 6 app
-                    %span.more ... more
-                  .labels 
-                    %span{class: "label filter-label"} safety
-                    %span{class: "label tag-label"} app 
-              %p.read-more Read More
-          .col-md-6
-            .resource
-              .content
-                .icon
-                  = image_tag("app-icon.jpg")
-                .copy
-                  %h1 Circle of 6
-                  %p 
-                    With Circle of 6, you can connect with your friends to stay close, stay safe and prevent violence before it happens. The circle of 6 app
-                    %span.more ... more
-                  .labels 
-                    %span{class: "label filter-label"} safety
-                    %span{class: "label tag-label"} app 
-              %p.read-more Read More
-          .col-md-6
-            .resource
-              .content
-                .icon
-                  = image_tag("app-icon.jpg")
-                .copy
-                  %h1 Circle of 6
-                  %p 
-                    With Circle of 6, you can connect with your friends to stay close, stay safe and prevent violence before it happens. The circle of 6 app
-                    %span.more ... more
-                  .labels 
-                    %span{class: "label filter-label"} safety
-                    %span{class: "label tag-label"} app 
-              %p.read-more Read More
+          - @results.each do |result|
+            .col-md-6
+              .resource
+                .content
+                  .icon
+                    = image_tag("app-icon.jpg")
+                  .copy
+                    %h1 
+                      = result.title
+                    %p 
+                      With Circle of 6, you can connect with your friends to stay close, stay safe and prevent violence before it happens. The circle of 6 app
+                      %span.more ... more
+                    .labels 
+                      - result.tags.each do |tag|
+                        %span{class: "label filter-label"} #{tag.name}
+                %p.read-more 
+                  = link_to 'Read More', result
