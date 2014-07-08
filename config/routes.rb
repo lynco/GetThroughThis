@@ -6,6 +6,7 @@ GetThroughThis::Application.routes.draw do
   devise_for :users
   resources :users, path: 'profiles'
   resources :search
+  resources :tags, only: [:show]
 
   root to: 'welcome#index'
   get "about" => "welcome#about"

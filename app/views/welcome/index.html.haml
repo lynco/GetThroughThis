@@ -4,6 +4,7 @@
       .col-md-6.hidden-xs.hidden-sm
         = image_tag("smartphone.jpg", class: "header-image img-responsive")
       .col-md-6
+<<<<<<< HEAD
         %h1{class: "headline"} If you or a loved one survived a crime or traumatic event, we want to help connect you to the right resources all in one place.
         %form{role: "form", class: "search-form", action: "/search", method: "get"}
           .form-group
@@ -15,6 +16,7 @@
                 %button{class: "btn btn-primary", type: "button"} Help Me Out
 .sample-apps
   .container
+<<<<<<< HEAD
     .row.heading-row
       .col-md-3.col-sm-1
         %hr.hidden-xs
@@ -38,7 +40,7 @@
           .content
             = image_tag("firstaid-icon.png", class: "center-block icon")
             %h3{class: "headline text-center"} Well-Being
-            %p{class: "byline"} Your health and well-being is critical to recovery. Connect with resources to heal your mind and body both short- and long-term.
+            %p{class: "byline"} Your health and well-being are critical to recovery. Connect with resources to heal your mind and body both short- and long-term.
             %p{class: "tag-text"} Related Tags
             %span{class: "input-group-btn"}
               %button{class: "btn btn-primary", type: "button"} Browse Health Services Apps
@@ -55,19 +57,18 @@
             = image_tag("lifesaver-icon.png", class: "center-block icon")
             %h3{class: "headline text-center"} Safety
             %span{class: "input-group-btn text-center"}
-              %button{class: "btn btn-primary", type: "button"} Browse Safety
+              %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/safety"} Browse Safety Apps
         .col-xs-12.col-sm-4
           .content
             = image_tag("firstaid-icon.png", class: "center-block icon")
             %h3{class: "headline text-center"} Well-Being
             %span{class: "input-group-btn text-center"}
-              %button{class: "btn btn-primary", type: "button"} Browse Health
-        .col-xs-12.col-sm-4
+              %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/wellbeing"} Browse Health Services Apps        .col-xs-12.col-sm-4
           .content.center-block
             = image_tag("gavel-icon.png", class: "center-block icon")
             %h3{class: "headline text-center"} Justice
             %span{class: "input-group-btn text-center"}
-              %button{class: "btn btn-primary", type: "button"} Browse Legal
+              %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/justice"} Browse Legal Resources
 .info
   .container
     .rows

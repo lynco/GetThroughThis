@@ -6,8 +6,7 @@
       = @web_service.title
     .labels 
       - @web_service.tags.each do |t|
-        %span{class: "label tag-label big-label"} 
-          = t.name
+        %span{class: "label tag-label big-label"} #{t.name}
 
     .row
       .col-md-8

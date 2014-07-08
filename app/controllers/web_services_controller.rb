@@ -6,7 +6,7 @@ class WebServicesController < ApplicationController
 
   private
   def set_web_service
-    @web_service = WebService.includes(:related_resources).find params[:id]
+    @web_service = WebService.includes(:related_resources, :tags).find params[:id]
   end
 end
 
