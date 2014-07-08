@@ -1,16 +1,60 @@
-.row.simple-box
-  .col-lg-12
-    = @web_service.title
-
-.row.simple-box
-  .col-lg-12
-    = raw @web_service.description
-
-.row.simple-box
-  .col-lg-12
+.details
+  .container
+    %a.back 
+      = link_to "< Back to search results.", session[:search_route]
     %h1 
-      = t :related_services
+      = @web_service.title
+    .labels 
+      - @web_service.tags.each do |t|
+        %span{class: "label tag-label big-label"} 
+          = t.name
 
-  - @web_service.related_resources.each do |rr|
-    .col-lg-12.simple-box
-      = link_to rr.title, rr
+    .row
+      .col-md-8
+        .description
+          .copy
+            %p
+              = raw @web_service.description
+        .row
+          .col-md-6
+            .content-box
+              .header
+                = image_tag("pin-icon.png")
+                Next Steps
+              .copy
+                %p Download from the App Store
+                .related
+                  %p Related Resources
+                  - @web_service.related_resources.each do |rr| 
+                    %p.related-resource 
+                      = rr.title
+                      - rr.tags.each do |rr_tag|
+                        %span.label.tag-label
+                          = rr_tag.name
+          .col-md-6
+            .content-box
+              .header
+                = image_tag("comment-icon.png")
+                Reviews
+              .copy
+                %p This app has been reviewed and vetted by LYNCo staff. As always, continue to use proper caution as this app cannot guarantee your safety. 
+      .col-md-4
+        .content-box
+          .header
+            = image_tag("where-icon.png")
+            Where
+          .copy
+            .download
+              .icon
+                = image_tag("app-icon.jpg")
+              .copy
+                %h2 iTunes App Store
+                %p By: Tech for Good Inc. 
+                %p Download >
+            .download
+              .icon
+                = image_tag("app-icon.jpg")
+              .copy
+                %h2 Android Google Play
+                %p By: Tech for Good Inc. 
+                %p Download >

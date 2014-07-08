@@ -57,7 +57,7 @@
                   = image_tag("plus-icon.png", class: "filter")
                   Add Resource
         .row
-          - @results.each do |result|
+          - @records.each_with_index do |rec, index|
             .col-md-6
               .resource
                 .content
@@ -65,13 +65,17 @@
                     = image_tag("app-icon.jpg", class: "img-responsive")
                   .copy
                     %h1 
-                      = result.title
+                      = link_to rec.title, rec
                     %p 
-                      With Circle of 6, you can connect with your friends to stay close, stay safe and prevent violence before it happens. The circle of 6 app
-                      %span.more ... more
+                      = raw @results[index].highlight.description[0]
+                      %span.more 
+                        = link_to "... more", rec
                     .labels 
-                      - result.tags.each do |tag|
+                      - rec.tags.each do |tag|
                         %h5 
-                          %span{class: "label filter-label"} #{tag.name}
+                          %span{class: "label #{highlight_label_with_query(tag.name, session[:search_query])}"} #{tag.name}
+                      - rec.service_use_modes.each do |mode|
+                        %h5
+                          %span{class: "label #{highlight_label_with_query(mode.name, session[:search_query])}"} #{mode.name}
                 %p.read-more 
-                  = link_to 'Read More', result
+                  = link_to 'Read More', rec
