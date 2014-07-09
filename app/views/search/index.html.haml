@@ -2,7 +2,7 @@
   .container
     %h1
       %span 
-        = @results.count
+        = @records.count
       resources found for
     %span{class: "label search-label active-label"} 
       = session[:search_query]
@@ -13,17 +13,23 @@
           .header.text-center
             = image_tag("filter-icon.png", class: "filter")
             Filter Results
-          .types
-            %h4 Type
-            %ul.list-unstyled
-              %li
-                %input{type: "checkbox"} Mobile App
-              %li
-                %input{type: "checkbox"} Web Resource
-              %li
-                %input{type: "checkbox"} In-person Service
-          %span{class: "input-group-btn text-center"}
-            %button.btn.btn-primary Filter
+<<<<<<< HEAD
+          = form_tag("/search", method: 'get') do
+            = hidden_field_tag 'q', session[:search_query]
+            .types
+              %h4 Type
+              %ul.list-unstyled
+                %li
+                  = check_box_tag 'query_service_mode_filter[]', 'app', check_filter(@filters, 'app')
+                  Mobile App
+                %li 
+                  = check_box_tag 'query_service_mode_filter[]', 'web', check_filter(@filters, 'web')
+                  Website
+                %li 
+                  = check_box_tag 'query_service_mode_filter[]', 'service', check_filter(@filters, 'service')
+                  In-person Service
+            %span{class: "input-group-btn text-center"}
+              %button.btn.btn-primary Filter
         .configuration
           .header.text-center
             = image_tag("plus-icon.png", class: "filter")
@@ -67,15 +73,18 @@
                     %h1 
                       = link_to rec.title, rec
                     %p 
-                      = raw @results[index].highlight.description[0]
+                      - if rec.highlight
+                        = raw rec.highlight
+                      - else
+                        = raw rec.description
                       %span.more 
                         = link_to "... more", rec
                     .labels 
                       - rec.tags.each do |tag|
                         %h5 
-                          %span{class: "label #{highlight_label_with_query(tag.name, session[:search_query])}"} #{tag.name}
+                          %span{class: "label #{highlight_label_with_query(tag.name, session[:search_query])}"} #{link_to tag.name, tag.slug_link}
                       - rec.service_use_modes.each do |mode|
                         %h5
-                          %span{class: "label #{highlight_label_with_query(mode.name, session[:search_query])}"} #{mode.name}
+                          %span{class: "label #{highlight_label_with_query(mode.name, session[:search_query])}"} #{link_to mode.name, url_for(controller: 'search', action: 'index', q: session[:search_query], query_service_mode_filter: mode.name)}
                 %p.read-more 
                   = link_to 'Read More', rec

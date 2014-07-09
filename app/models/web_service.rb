@@ -1,4 +1,6 @@
 class WebService < ActiveRecord::Base
+  attr_accessor :highlight
+
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 

@@ -4,7 +4,11 @@ class TagsController < ApplicationController
     session[:search_query] = params[:id]
     session[:search_route] = "/tags/#{params[:id]}"
 
-    @results = t.web_services
+    @records = t.web_services
+
+    # Hack: if this is nil, there are no search results expected.
+    @results = nil
+
     render "search/index"
   end
 
