@@ -1,7 +1,9 @@
 .details
   .container
-    %a.back 
-      = link_to "< Back to search results.", session[:search_route]
+    .description
+      %p
+        %a.back 
+          = link_to "< Back to search results.", session[:search_route]
     %h1 
       = @web_service.title
     .labels 
@@ -20,16 +22,14 @@
               .header
                 = image_tag("pin-icon.png")
                 Next Steps
-              .copy
-                %p Download from the App Store
-                .related
-                  %p Related Resources
-                  - @web_service.related_resources.each do |rr| 
-                    %p.related-resource 
-                      = rr.title
-                      - rr.tags.each do |rr_tag|
-                        %span.label.tag-label
-                          = rr_tag.name
+              .related.copy
+                %p Related Resources
+                - @web_service.related_resources.each do |rr| 
+                  %p.related-resource 
+                    = link_to rr.title, rr
+                    - rr.tags.each do |rr_tag|
+                      %span.label.tag-label
+                        = link_to rr_tag.name, rr_tag.slug_link
           .col-md-6
             .content-box
               .header
@@ -43,17 +43,11 @@
             = image_tag("where-icon.png")
             Where
           .copy
-            .download
-              .icon
-                = image_tag("app-icon.jpg")
-              .copy
-                %h2 iTunes App Store
-                %p By: Tech for Good Inc. 
-                %p Download >
-            .download
-              .icon
-                = image_tag("app-icon.jpg")
-              .copy
-                %h2 Android Google Play
-                %p By: Tech for Good Inc. 
-                %p Download >
+            - @web_service.download_urls.each do |du|
+              .download
+                .icon
+                  = image_tag("app-icon.jpg")
+                .copy
+                  %h2 #{du.link_type}
+                  %p By: -------
+                  %p #{link_to 'Download >', du.url}

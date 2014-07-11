@@ -2,21 +2,11 @@
   .container
     .row
       .col-md-6.hidden-xs.hidden-sm
-        = image_tag("smartphone.jpg", class: "header-image img-responsive")
+        = image_tag("smartphone-smaller.jpg", class: "header-image")
       .col-md-6
-<<<<<<< HEAD
         %h1{class: "headline"} If you or a loved one survived a crime or traumatic event, we want to help connect you to the right resources all in one place.
-        %form{role: "form", class: "search-form", action: "/search", method: "get"}
-          .form-group
-            %label{for: "info-about"} I need information about...
-            .input-group.left-inner-addon
-              %i{class: "glyphicon glyphicon-search"}
-              %input{name: "q", type: "text", class: "form-control"}
-              %span{class: "input-group-btn"}
-                %button{class: "btn btn-primary", type: "button"} Help Me Out
 .sample-apps
   .container
-<<<<<<< HEAD
     .row.heading-row
       .col-md-3.col-sm-1
         %hr.hidden-xs
@@ -35,7 +25,7 @@
             %p{class: "byline"} When you’re in a bad or dangerous situation, grab your phone and access these resources to keep you and your loved ones safe.
             %p{class: "tag-text"} Related Tags
             %span{class: "input-group-btn"}
-              %button{class: "btn btn-primary", type: "button"} Browse Safety Apps
+              %button{class: "btn btn-primary", type: "button" "data-target" => "/tags/safety"} Browse Safety Apps
         .col-md-4
           .content
             = image_tag("firstaid-icon.png", class: "center-block icon")
@@ -43,14 +33,14 @@
             %p{class: "byline"} Your health and well-being are critical to recovery. Connect with resources to heal your mind and body both short- and long-term.
             %p{class: "tag-text"} Related Tags
             %span{class: "input-group-btn"}
-              %button{class: "btn btn-primary", type: "button"} Browse Health Services Apps
+              %button{class: "btn btn-primary", type: "button" "data-target" => "/tags/wellbeing"} Browse Health Services Apps
         .col-md-4
           .content
             = image_tag("gavel-icon.png", class: "center-block icon")
             %h3{class: "headline text-center"} Justice
             %p{class: "byline"} Navigating the legal system can be confusing, especially in a time of need. Browse resources to help you find a resolution.
             %span{class: "input-group-btn"}
-              %button{class: "btn btn-primary", type: "button"} Browse Legal Resources
+              %button{class: "btn btn-primary", type: "button" "data-target" => "/tags/justice"} Browse Legal Resources Apps
       .row.hidden-md.hidden-lg
         .col-xs-12.col-sm-4
           .content

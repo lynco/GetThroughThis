@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
     I18n.locale = set_locale
     insert_default_param_filter
     create_navbar_data
+    expire_or_extend_session(2.hours)
   end
 
   rescue_from ActionController::RoutingError do |exception|
@@ -51,5 +52,16 @@ class ApplicationController < ActionController::Base
   # Use URL options to set locale. I prefer it that way.
   def default_url_options(options={})
     { locale: I18n.locale }
+  end
+
+  def expire_or_extend_session(time_duration)
+    if session[:expire_at]
+      if session[:expire_at] < Time.current # Session expired before we visited the page, remove known session keys
+        session.delete :search_query
+        session.delete :search_route
+      end
+    end
+    # Extend the session due to this visit
+    session[:expire_at]=Time.current + time_duration
   end
 end

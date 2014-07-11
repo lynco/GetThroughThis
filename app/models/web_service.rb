@@ -6,6 +6,8 @@ class WebService < ActiveRecord::Base
 
   has_one :image, as: :imageable, dependent: :destroy
 
+  has_many :download_urls
+
   has_and_belongs_to_many :tags
   has_and_belongs_to_many :service_use_modes
   has_and_belongs_to_many :languages
