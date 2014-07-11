@@ -1,14 +1,10 @@
-/ Template 1 begins here
-.details
-  .container
-    .row.simple-box
-      .col-lg-12.col-md-12.col-sm-12.col-xs-12.band3
-        .big-font.horiz-center
-          = raw(@page_content[:title])
-
-    .row.content.simple-box
-      .col-lg-12.col-md-12.col-sm-12.col-xs-12.big-font
-        .pane
-          .para
-            = raw(@page_content[:main_content])
+// Template 1 begins here
+.search
+  .container.details
+    .row
+      .copy
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12.big-font
+          .pane
+            .para
+              = raw(@page_content[:main_content])
 

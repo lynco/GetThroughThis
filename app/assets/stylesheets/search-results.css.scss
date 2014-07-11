@@ -1,5 +1,6 @@
 .search {
   background-color: $offwhite2;
+  min-height: 450px;
 
   hr {
     border-top: 1px solid $lol-grey7;
@@ -55,7 +56,6 @@
       }
     }
   }
-
 
   .filter {
     margin-bottom: 3px;
@@ -166,7 +166,6 @@ ul.dropdown-menu-form {
 .search-label {
   @include headline-text(15px, $color: $light-text);
 }
-
 
 .filter-label {
   background-color: $lol-grey9;
