@@ -1,10 +1,10 @@
 %main{id: "search"}
   .container
     .row
-      .col-md-6
+      .col-md-6.hidden-xs.hidden-sm
         = image_tag("smartphone.jpg", class: "header-image")
       .col-md-6
-        %h1{class: "headline"} When you’ve experienced a traumatic event and need help, finding the right resources is key.
+        %h1{class: "headline"} If you or a loved one survived a crime or traumatic event, we want to help connect you to the right resources all in one place.
         %form{role: "form", class: "info-about", action: "/search", method: "get"}
           .form-group
             %label{for: "info-about"} I need information about...
@@ -15,12 +15,12 @@
                 %button{class: "btn btn-primary", type: "button"} Help Me Out
 .sample-apps
   .container
-    .row
-      .col-md-3
+    .row.browse-headline
+      .col-md-3.hidden-xs.hidden-sm
         %hr
       .col-md-6
-        %h2.text-center Don’t know exactly what you’re searching for?
-        %h2.text-center Browse some of the resources that are available.
+        %h2.text-center It can be hard to believe you’ve been the victim of a crime, but it’s normal to feel fear, pain, and discomfort. 
+        %h2.text-center Here is a collection of mobile & web apps to get you what you need after a crime, or even help prevent one. 
       .col-md-3
         %hr
     .row
@@ -28,7 +28,7 @@
         .content
           = image_tag("lifesaver-icon.png", class: "center-block icon")
           %h3{class: "icon-text text-center"} Safety
-          %p{class: "body-copy"} When something happens to you or you’re in a bad situation, there is a collection of mobile & web resources that address your immediate needs.
+          %p{class: "body-copy"} When you’re in a bad or dangerous situation, grab your phone and access these resources to keep you and your loved ones safe.
           %p{class: "tag-text"} Related Tags
           .tag-list
             %span{class: "label tag-label"} safety
@@ -41,7 +41,7 @@
         .content
           = image_tag("firstaid-icon.png", class: "center-block icon")
           %h3{class: "icon-text text-center"} Well-Being
-          %p{class: "body-copy"} Every situation leaves behind a host of possible longterm effects and ongoing needs. Your health and well-being is critical to recovery.
+          %p{class: "body-copy"} Every situation leaves behind a host of possible longterm effects and ongoing needs. Your health and well-being is critical to recovery. 
           %p{class: "tag-text"} Related Tags
           .tag-list
             %span{class: "label tag-label"} safety
@@ -54,7 +54,7 @@
         .content
           = image_tag("gavel-icon.png", class: "center-block icon")
           %h3{class: "icon-text text-center"} Justice
-          %p{class: "body-copy"} One of the final stages in recovery means justice and making sure to address all your legal needs. Get help with the paperwork.
+          %p{class: "body-copy"} Navigating the legal system can be confusing, especially in a time of need. Browse resources to help you find a resolution.
           %p{class: "tag-text"} Related Tags        
           .tag-list
             %span{class: "label tag-label"} safety
@@ -63,11 +63,11 @@
             %span{class: "label tag-label"} web
           %span{class: "input-group-btn"}
             %button{class: "btn btn-primary", type: "button"} Browse Legal Resources
+>>>>>>> 5e16f0d... Update copy.
 .info
   .container
     .rows
       .col-md-offset-2.col-md-8
-        %h2.text-center Get Through This exists because CA families and communities need a resource to empower them during their recovery process.
 .sponsors
   .container
 .separator
