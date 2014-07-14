@@ -2,10 +2,10 @@
   .container
     .row
       .col-md-6.hidden-xs.hidden-sm
-        = image_tag("smartphone.jpg", class: "header-image")
+        = image_tag("smartphone.jpg", class: "header-image img-responsive")
       .col-md-6
         %h1{class: "headline"} If you or a loved one survived a crime or traumatic event, we want to help connect you to the right resources all in one place.
-        %form{role: "form", class: "info-about", action: "/search", method: "get"}
+        %form{role: "form", class: "search-form", action: "/search", method: "get"}
           .form-group
             %label{for: "info-about"} I need information about...
             .input-group.left-inner-addon
@@ -15,55 +15,75 @@
                 %button{class: "btn btn-primary", type: "button"} Help Me Out
 .sample-apps
   .container
-    .row.browse-headline
-      .col-md-3.hidden-xs.hidden-sm
-        %hr
-      .col-md-6
-        %h2.text-center It can be hard to believe you’ve been the victim of a crime, but it’s normal to feel fear, pain, and discomfort. 
-        %h2.text-center Here is a collection of mobile & web apps to get you what you need after a crime, or even help prevent one. 
-      .col-md-3
-        %hr
-    .row
-      .col-md-4
-        .content
-          = image_tag("lifesaver-icon.png", class: "center-block icon")
-          %h3{class: "icon-text text-center"} Safety
-          %p{class: "body-copy"} When you’re in a bad or dangerous situation, grab your phone and access these resources to keep you and your loved ones safe.
-          %p{class: "tag-text"} Related Tags
-          .tag-list
-            %span{class: "label tag-label"} safety
-            %span{class: "label tag-label"} app
-            %span{class: "label tag-label"} service
-            %span{class: "label tag-label"} web
-          %span{class: "input-group-btn"}
-            %button{class: "btn btn-primary", type: "button"} Browse Safety Apps
-      .col-md-4
-        .content
-          = image_tag("firstaid-icon.png", class: "center-block icon")
-          %h3{class: "icon-text text-center"} Well-Being
-          %p{class: "body-copy"} Every situation leaves behind a host of possible longterm effects and ongoing needs. Your health and well-being is critical to recovery. 
-          %p{class: "tag-text"} Related Tags
-          .tag-list
-            %span{class: "label tag-label"} safety
-            %span{class: "label tag-label"} app
-            %span{class: "label tag-label"} service
-            %span{class: "label tag-label"} web
-          %span{class: "input-group-btn"}
-            %button{class: "btn btn-primary", type: "button"} Browse Health Services Apps
-      .col-md-4
-        .content
-          = image_tag("gavel-icon.png", class: "center-block icon")
-          %h3{class: "icon-text text-center"} Justice
-          %p{class: "body-copy"} Navigating the legal system can be confusing, especially in a time of need. Browse resources to help you find a resolution.
-          %p{class: "tag-text"} Related Tags        
-          .tag-list
-            %span{class: "label tag-label"} safety
-            %span{class: "label tag-label"} app
-            %span{class: "label tag-label"} service
-            %span{class: "label tag-label"} web
-          %span{class: "input-group-btn"}
-            %button{class: "btn btn-primary", type: "button"} Browse Legal Resources
->>>>>>> 5e16f0d... Update copy.
+    .row.heading-row
+      .col-md-3.col-sm-1
+        %hr.hidden-xs
+      .col-md-6.col-sm-10
+        %h2.heading.text-center It can be hard to believe you’ve been the victim of a crime, but it’s normal to feel fear, pain, and discomfort. 
+        %h2.heading.text-center Here is a collection of mobile & web apps to get you what you need after a crime, or even help prevent one. 
+      .col-md-3.col-sm-1
+        %hr.hidden-xs
+    .browse-apps
+      .row.hidden-xs.hidden-sm
+        .col-md-4
+          .content
+            = image_tag("lifesaver-icon.png", class: "center-block icon")
+            %h3{class: "headline text-center"} Safety
+            .hidden-xs
+            %p{class: "byline"} When you’re in a bad or dangerous situation, grab your phone and access these resources to keep you and your loved ones safe.
+            %p{class: "tag-text"} Related Tags
+            .tags
+              %span{class: "label label-tag"} safety
+              %span{class: "label label-tag"} app
+              %span{class: "label label-tag"} service
+              %span{class: "label label-tag"} web
+            %span{class: "input-group-btn"}
+              %button{class: "btn btn-primary", type: "button"} Browse Safety Apps
+        .col-md-4
+          .content
+            = image_tag("firstaid-icon.png", class: "center-block icon")
+            %h3{class: "headline text-center"} Well-Being
+            %p{class: "byline"} Every situation leaves behind a host of possible longterm effects and ongoing needs. Your health and well-being is critical to recovery. 
+            %p{class: "tag-text"} Related Tags
+            .tags
+              %span{class: "label label-tag"} safety
+              %span{class: "label label-tag"} app
+              %span{class: "label label-tag"} service
+              %span{class: "label label-tag"} web
+            %span{class: "input-group-btn"}
+              %button{class: "btn btn-primary", type: "button"} Browse Health Services Apps
+        .col-md-4
+          .content
+            = image_tag("gavel-icon.png", class: "center-block icon")
+            %h3{class: "headline text-center"} Justice
+            %p{class: "byline"} Navigating the legal system can be confusing, especially in a time of need. Browse resources to help you find a resolution.
+            %p{class: "tag-text"} Related Tags        
+            .tags
+              %span{class: "label label-tag"} safety
+              %span{class: "label label-tag"} app
+              %span{class: "label label-tag"} service
+              %span{class: "label label-tag"} web
+            %span{class: "input-group-btn"}
+              %button{class: "btn btn-primary", type: "button"} Browse Legal Resources
+      .row.hidden-md.hidden-lg
+        .col-xs-12.col-sm-4
+          .content
+            = image_tag("lifesaver-icon.png", class: "center-block icon")
+            %h3{class: "headline text-center"} Safety
+            %span{class: "input-group-btn text-center"}
+              %button{class: "btn btn-primary", type: "button"} Browse Safety
+        .col-xs-12.col-sm-4
+          .content
+            = image_tag("firstaid-icon.png", class: "center-block icon")
+            %h3{class: "headline text-center"} Well-Being
+            %span{class: "input-group-btn text-center"}
+              %button{class: "btn btn-primary", type: "button"} Browse Health
+        .col-xs-12.col-sm-4
+          .content.center-block
+            = image_tag("gavel-icon.png", class: "center-block icon")
+            %h3{class: "headline text-center"} Justice
+            %span{class: "input-group-btn text-center"}
+              %button{class: "btn btn-primary", type: "button"} Browse Legal
 .info
   .container
     .rows

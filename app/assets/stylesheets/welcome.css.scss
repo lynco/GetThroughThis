@@ -1,162 +1,174 @@
 #search {
-  height: 407px;
   background-color: $beige;
+  padding: 25px 25px 15px;
+
+  @media (min-width: $screen-md-min) { 
+    padding: 55px 40px;
+  }
+
+  .headline {
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 22px;
+
+    @media (min-width: $screen-sm-min) { 
+      font-size: 27px;
+    }
+  }
+
+  .search-form {
+    padding-top: 20px;
+
+    @media (min-width: $screen-sm-min) { 
+      padding-top: 30px;
+    }
+
+    label {
+      font-size: 18px;
+      font-family: $primary-font;
+      color: $lol-grey4;
+      font-weight: 400; 
+    }
+
+    .form-control {
+      height: 42px;
+      font-size: 18px;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      box-shadow: none;
+      border-color: $lol-grey3; 
+      background-color: #fff;
+      float: none;
+    }
+
+    .left-inner-addon {
+      position: relative;
+
+      i {
+        position: absolute;
+        padding: 10px 12px;
+        pointer-events: none;
+        z-index: 3;
+        top: 4px;
+      }
+
+      input {
+        padding-left: 40px;    
+      }
+    }
+  }
 }
 
-.header-image {
-  padding-top: 65px;
-}
 
-.headline {
-  font-family: $primary-font;
-  font-size: 27px;
-  font-weight: 700;
-  margin-top: 92px;
-}
+.sample-apps {
+  .heading {
+    font-family: $primary-font;
+    color: $lol-grey4;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 
-main .info-about {
-  font-family: $primary-font;
-  color: $lol-grey4;
-  font-size: 18px;
-  padding-top: 28px;
-}
+  .heading-row {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 
-main .info-about label {
-  font-weight: 400; 
-}
+  hr {
+    margin-top: 75px;
+    height: 0;
+    border-top: 2px solid $lol-grey5;
+    border-bottom: 2px solid $lol-grey5;
+  }
 
-main .form-control {
-  height: 42px;
-  font-size: 18px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  box-shadow: none;
-  border-color: $lol-grey3; 
-  background-color: #fff;
-}
+  .btn {
+    margin-bottom: 25px;
+  }
 
-.left-inner-addon {
-    position: relative;
-}
+  .browse-apps {
+    margin-bottom: 60px;
+  }
 
-.left-inner-addon input {
-    padding-left: 40px;    
-}
+  .col-md-4:nth-child(3n + 1), 
+  .col-xs-12:nth-child(3n + 1), 
+  .col-sm-4:nth-child(3n + 1) {
+    background-color: $list-1;
+  }
 
-.left-inner-addon i {
-    position: absolute;
-    padding: 10px 12px;
-    pointer-events: none;
-    z-index: 3;
-}
+  .col-md-4:nth-child(3n + 2), 
+  .col-xs-12:nth-child(3n + 2),
+  .col-sm-4:nth-child(3n + 2) {
+    background-color: $list-2;
+  }
 
-h2 {
-  font-family: $primary-font;
-  color: $lol-grey4;
-  font-size: 21px;
-}
+  .col-md-4:nth-child(3n + 3), 
+  .col-xs-12:nth-child(3n + 3),
+  .col-sm-4:nth-child(3n + 3) {
+    background-color: $list-3;
+  }
 
-.sample-apps hr {
-  margin-top: 75px;
-  height: 0;
-  border-top: 2px solid $lol-grey5;
-  border-bottom: 2px solid $lol-grey5;
-}
+  .content {
+    margin-left: 20px;
+    margin-right: 20px;
 
-.sample-apps h2 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
+    @media (min-width: $screen-md-min) { 
+      padding-bottom: 75px;
+    }
 
-.sample-apps .btn {
-  margin-bottom: 25px;
-}
+    .icon {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
 
-.browse-headline {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
+    .headline {
+      font-family: $logo-font;
+      color: $blue;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
 
-.browse-apps {
-  margin-bottom: 60px;
-}
+    .byline {
+      font-family: $primary-font;
+      color: $black;
+      font-size: 18px;
+      height: 125px;
+      border-bottom: 1px solid $lol-grey6;
+      margin-bottom: 8px;
+    }
 
-.sample-apps .col-md-4 .content {
-  height: 450px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
+    .tag-text {
+      margin-top: 17px;
+      margin-bottom: 17px;
+      font-size: 14px;
+      font-family: $primary-font;
+      color: $black;
+    }
 
-.sample-apps .col-md-4:nth-child(3n + 1), 
-  .sample-apps .col-xs-12:nth-child(3n + 1),
-  .sample-apps .col-sm-4:nth-child(3n + 1)
-{
-  background-color: $list-1;
-}
+    .tags {
+      margin-bottom: 33px;
+    }
 
-.sample-apps .col-md-4:nth-child(3n + 2), 
-  .sample-apps .col-xs-12:nth-child(3n + 2),
-  .sample-apps .col-sm-4:nth-child(3n + 2)
-{
-  background-color: $list-2;
-}
-
-.sample-apps .col-md-4:nth-child(3n + 3), 
-  .sample-apps .col-xs-12:nth-child(3n + 3),
-  .sample-apps .col-sm-4:nth-child(3n + 3)
-{
-  background-color: $list-3;
-}
-
-.sample-apps .icon {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.sample-apps .icon-text {
-  font-family: $logo-font;
-  color: $blue;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 25px;
-}
-
-.sample-apps .body-copy {
-  font-family: $primary-font;
-  color: $black;
-  font-size: 18px;
-  height: 125px;
-  border-bottom: 1px solid $lol-grey6;
-  margin-bottom: 8px;
-}
-
-.sample-apps .tag-text {
-  margin-top: 17px;
-  margin-bottom: 17px;
-  font-size: 14px;
-  font-family: $primary-font;
-  color: $black;
-}
-
-.sample-apps .tag-list {
-  margin-bottom: 33px;
-}
-.sample-apps .tag-label {
-  background-color: $lol-grey4;
+    .label-tag {
+      background-color: $lol-grey4;
+    }
+  }
 }
 
 .info {
-  height: 371px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: $lol-blue;
-}
 
-.info h2 {
-  font-weight: 700;
+  h2 {
+    font-weight: 700;
+  }
 }
 
 .sponsors {
-  height: 123px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: $blue;
   border-bottom: 4px solid $offwhite;
 }
