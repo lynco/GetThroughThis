@@ -10,7 +10,7 @@
 .headline {
   font-family: $primary-font;
   font-size: 27px;
-  font-weight: 700px;
+  font-weight: 700;
   margin-top: 92px;
 }
 
@@ -51,10 +51,6 @@ main .form-control {
     z-index: 3;
 }
 
-.sample-apps .container {
-  height: 700px;
-}
-
 h2 {
   font-family: $primary-font;
   color: $lol-grey4;
@@ -62,31 +58,54 @@ h2 {
 }
 
 .sample-apps hr {
-  margin-top: 45px;
+  margin-top: 75px;
   height: 0;
   border-top: 2px solid $lol-grey5;
   border-bottom: 2px solid $lol-grey5;
 }
 
-.sample-apps .col-md-4 {
-  margin-top: 25px;
+.sample-apps h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.sample-apps .content {
-  height: 478px;
+.sample-apps .btn {
+  margin-bottom: 25px;
+}
+
+.browse-headline {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.browse-apps {
+  margin-bottom: 60px;
+}
+
+.sample-apps .col-md-4 .content {
+  height: 450px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.sample-apps .col-md-4:nth-child(3n + 1) {
+.sample-apps .col-md-4:nth-child(3n + 1), 
+  .sample-apps .col-xs-12:nth-child(3n + 1),
+  .sample-apps .col-sm-4:nth-child(3n + 1)
+{
   background-color: $list-1;
 }
 
-.sample-apps .col-md-4:nth-child(3n + 2) {
+.sample-apps .col-md-4:nth-child(3n + 2), 
+  .sample-apps .col-xs-12:nth-child(3n + 2),
+  .sample-apps .col-sm-4:nth-child(3n + 2)
+{
   background-color: $list-2;
 }
 
-.sample-apps .col-md-4:nth-child(3n) {
+.sample-apps .col-md-4:nth-child(3n + 3), 
+  .sample-apps .col-xs-12:nth-child(3n + 3),
+  .sample-apps .col-sm-4:nth-child(3n + 3)
+{
   background-color: $list-3;
 }
 
