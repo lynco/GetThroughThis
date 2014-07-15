@@ -8,6 +8,7 @@ GetThroughThis::Application.routes.draw do
   resources :search
 
   root to: 'welcome#index'
+  get "about" => "welcome#about"
 
   get "/search" => "search#results"
   namespace :cms do
