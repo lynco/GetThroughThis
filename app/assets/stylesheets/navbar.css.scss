@@ -1,32 +1,70 @@
-nav.navbar {
-  margin-bottom: 0;
-}
-
-.navbar-brand {
-  text-transform: uppercase;
-  font-family: $logo-font;
-  font-size: 24px;
-  font-weight: 700;
-  color: $grey;
-  padding: 41px 0 41px;
-  height: 27px;
-  line-height: 0px;
-}
-
-.navbar {
+nav {
+  margin-bottom: 0!important;
   border-bottom: 8px solid $light-grey;
   background-color: $offwhite;
+    
+  .navbar-header {
+    text-align: center;
+
+    @media (min-width: $screen-xs-max) {
+      padding-top: 30px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      margin-top: 30px;
+    }
+  }
+
+  .navbar-brand {
+    font-family: $logo-font;
+    font-size: 24px;
+    font-weight: 700;
+    color: $grey;
+    height: 27px;
+    line-height: 0px;
+    float: none!important;
+
+    @media (min-width: $screen-sm-min) { 
+      float: left!important;
+    }
+  }
+
+  .navbar-nav {
+    display: inline-block;
+    float: right;
+
+    @media (max-width: $screen-sm-max) {
+      list-style: none; 
+      position: relative; 
+      float: left; 
+      display: block; 
+      left: 50%; 
+      margin: 0;
+    }
+  }
+
+  .navbar-nav > li {
+    @media (max-width: $screen-sm-max) {
+      display: inline-block;
+      font-size: 14px;
+      position: relative; 
+      display: block; 
+      float: left;
+      right: 50%;
+    }
+    
+    a {
+      padding-top: 39px;
+      padding-bottom: 25px;
+      color: $grey;
+      font-family: $primary-font;
+      font-size: 18px;
+      @media (max-width: $screen-sm-max) {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
-.navbar-nav {
-  display: inline-block;
-  position: relative;
-}
 
-.navbar-nav > li > a {
-  padding-top: 39px;
-  padding-bottom: 25px;
-  color: $grey;
-  font-family: $primary-font;
-  font-size: 18px;
-}
+

@@ -1,15 +1,8 @@
-%nav.navbar{role: "navigation"}
+%nav{role: "navigation"}
   .container
     .navbar-header
       %a.navbar-brand{href: "/"} Get Through This
-    .navbar-right
-      %button.navbar-toggle{type: "button", "data-toggle" => "collapse", "data-target" => "#bs-example-navbar-collapse-1"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-    .collapse.navbar-collapse{id: "bs-example-navbar-collapse-1"}
-      %ul.nav.navbar-nav
-        - @navbar_entries.each do |entry|
-          %li
-            = link_to entry[:title], entry[:url]
+    %ul.nav.navbar-nav.center-block
+      - @navbar_entries.each do |entry|
+        %li
+          = link_to entry[:title], entry[:url]
