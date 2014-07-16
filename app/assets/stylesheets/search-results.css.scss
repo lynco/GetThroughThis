@@ -1,144 +1,165 @@
 .search {
   background-color: $offwhite2;
-}
-.search .container {
-  padding-top: 35px; 
+
+  h1 {
+    font-family: $primary-font;
+    font-size: 18px;
+    display: inline;
+    color: $black;
+  }
+
+  button {
+    margin-left: 37px!important;
+    margin-bottom: 10px;
+    width: 95px;
+    border: none;
+  }
+
+  .configuration {
+    border: 1px solid $lol-grey7;
+    margin-bottom: 15px;
+    background-color: #fff;
+
+    p { 
+      font-family: $primary-font;
+      font-size: 10px;  
+      color: $black;
+    }
+  }
+
+  .mobile-configuration {
+    ul {
+      float: right;
+      li {
+        &:first-child {
+          padding-right: 10px;
+        }
+      }
+    }
+
+    a {
+      font-family: $primary-font;
+      color: $dark-grey;
+    }
+  }
+
+  .container {
+    padding-top: 35px; 
+  }
+
+  .content {
+    background-color: #fff;
+    border-top: 4px solid $dark-blue;
+
+    .copy {
+      margin-top: 20px;
+      display: inline-block;
+      width: 70%;
+    }
+  }
+
+  .header {
+    text-transform: uppercase;
+    font-family: $logo-font;
+    font-size: 15px;
+    color: $dark-blue;
+    font-weight: 700;
+    background-color: $lol-grey5;
+    border-top: 4px solid $dark-blue;
+    padding-bottom: 7px;
+    padding-top: 4px;
+    margin-bottom: 10px;
+  }
+
+  .filter {
+    margin-bottom: 3px;
+  }
+
+  .filter-label {
+    background-color: $lol-grey8;
+  }
+
+  .tag-label {
+    background-color: $lol-grey4;
+  }
+
+  .search-label {
+    background-color: $lol-grey4;
+    font-family: $primary-font;
+    font-size: 15px
+  }
+
+  .types, .bottom {
+    margin-right: 14px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+  }
+
+  .bottom {
+    border-bottom: 1px solid $lol-grey5;
+  }
+
+  .types {
+    h4 {
+      font-family: $logo-font;
+      font-size: 15px;
+      color: $black;
+    }
+
+    ul {
+      margin-right: 10px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $lol-grey5;
+      font-family: $primary-font;
+      font-size: 12px;
+      color: $black;
+    }
+
+    input {
+      margin-right: 10px;
+    }
+  }
+
+  .resource {
+    background-color: $lol-grey5;
+    border: 1px solid $lol-grey7;
+    margin-bottom: 15px;
+
+    .more {
+      font-weight: 700;
+    }
+
+    .read-more {
+      margin-top: 8px;
+      margin-left: 13px;
+      text-transform: uppercase;
+      font-family: $logo-font;
+      font-size: 12px;
+      color: $dark-blue;
+      font-weight: 700;
+    }
+
+    .icon {
+      margin-top: 20px;
+      margin-left: 8px;
+      margin-right: 20px;
+      float: left;
+    }
+
+    .labels {
+      margin-bottom: 15px;
+    }
+  }
 }
 
-.search h1 {
-  font-family: $primary-font;
-  font-size: 18px;
-  display: inline;
-  color: $black;
-}
-
-.search .search-label {
-  background-color: $lol-grey4;
-  font-family: $primary-font;
-  font-size: 15px
-}
-
-.search .configuration {
-  border: 1px solid $lol-grey7;
-}
-
-.header {
-  text-transform: uppercase;
-  font-family: $logo-font;
-  font-size: 15px;
-  color: $dark-blue;
-  font-weight: 700;
-  background-color: $lol-grey5;
-  border-top: 4px solid $dark-blue;
-  padding-bottom: 7px;
-  padding-top: 4px;
-}
-
-.search button {
-  border: none;
-}
-
-.header .filter {
-  margin-bottom: 3px;
-}
-
-.header { 
- margin-bottom: 10px;
-}
-
-.configuration {
-  margin-bottom: 15px;
-  background-color: #fff;
-}
-
-.types, .bottom {
-  margin-right: 14px;
-  margin-bottom: 15px;
-  margin-left: 20px;
-}
-
-.types h4 {
-  font-family: $logo-font;
-  font-size: 15px;
-  color: $black;
-}
-
-.types ul {
-  margin-right: 10px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid $lol-grey5;
-  font-family: $primary-font;
-  font-size: 12px;
-  color: $black;
-}
-
-.types input {
-  margin-right: 10px;
-}
-
-.configuration p {
-  font-family: $primary-font;
-  font-size: 10px;  
-  color: $black;
-}
-
-.search button {
-  margin-left: 37px!important;
-  margin-bottom: 10px;
-  width: 95px;
-}
-
-.bottom {
-  border-bottom: 1px solid $lol-grey5;
-}
-
-.resource {
-  background-color: $lol-grey5;
-  border: 1px solid $lol-grey7;
-  margin-bottom: 15px;
-}
-
-.resource .more {
-  font-weight: 700;
-}
-
-.resource .read-more {
-  margin-top: 8px;
-  margin-left: 13px;
-  text-transform: uppercase;
-  font-family: $logo-font;
-  font-size: 12px;
-  color: $dark-blue;
-  font-weight: 700;
-
-}
-
-.search .content {
-  background-color: #fff;
-  border-top: 4px solid $dark-blue;
-}
-
-.resource .icon {
-  margin-top: 20px;
-  margin-left: 8px;
-  margin-right: 20px;
-  float: left;
-}
-
-.filter-label {
-  background-color: $lol-grey8;
-}
-
-.tag-label {
-  background-color: $lol-grey4;
-}
-
-.resource .labels {
-  margin-bottom: 15px;
-}
-
-.content .copy {
-  margin-top: 20px;
-  display: inline-block;
-  width: 70%;
+ul.dropdown-menu-form {
+  padding: 5px 25px 0;
+  max-height: 300px;
+  overflow-y: scroll;
+  min-width: 170px;
+  li { 
+    font-size: 12px;
+    font-weight: 400;
+    font-family: $primary-font;
+  }
 }

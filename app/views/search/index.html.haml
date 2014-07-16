@@ -8,7 +8,7 @@
       = session[:search_query]
     %hr
     .row
-      .col-md-2
+      .col-md-2.hidden-xs.hidden-sm
         .configuration
           .header.text-center
             = image_tag("filter-icon.png", class: "filter")
@@ -16,11 +16,11 @@
           .types
             %h4 Type
             %ul.list-unstyled
-              %li 
+              %li
                 %input{type: "checkbox"} Mobile App
-              %li 
+              %li
                 %input{type: "checkbox"} Web Resource
-              %li 
+              %li
                 %input{type: "checkbox"} In-person Service
           %span{class: "input-group-btn"}
             %button.btn.btn-primary Filter
@@ -32,16 +32,37 @@
             %p Are we missing something from these results?
             %p Suggest a resource to add.
           %span{class: "input-group-btn"}
-            %button.btn.btn-default Support
-
+            %button.btn.btn-default Suggest
       .col-md-10
+        .row
+          .col-xs-12.visible-xs.visible-sm.mobile-configuration
+            %ul.list-inline
+              %li
+                .dropdown
+                  %a{"data-toggle" => "dropdown", class: "dropdown-toggle", href: "#"}
+                    = image_tag("filter-icon.png", class: "filter")
+                    Filter
+                  %ul{"role" => "menu", class: "dropdown-menu dropdown-menu-form"}
+                    %li
+                      %label.checkbox
+                        %input{type: "checkbox"} Mobile App
+                    %li
+                      %label.checkbox
+                        %input{type: "checkbox"} Web Resource
+                    %li
+                      %label.checkbox
+                        %input{type: "checkbox"} In-person Service
+              %li
+                %a
+                  = image_tag("plus-icon.png", class: "filter")
+                  Add Resource
         .row
           - @results.each do |result|
             .col-md-6
               .resource
                 .content
                   .icon
-                    = image_tag("app-icon.jpg")
+                    = image_tag("app-icon.jpg", class: "img-responsive")
                   .copy
                     %h1 
                       = result.title
