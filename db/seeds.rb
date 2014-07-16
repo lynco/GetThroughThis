@@ -17,7 +17,9 @@ u2 = User.find_or_create_by(email: 'just_u@me.com') do |u|
   u.admin=false
 end
 
-navbar_entries = [{title: "Home", url: "/"}, {title: "About Us", url: "/cms/pages/about"}, {title: "FAQ", url: "/"}, {title: "For Developers", url: "/"}]
+navbar_entries = [{title: "Home", url: "/"}, {title: "What Is Trauma", url: "/cms/pages/what-is-trauma"},
+                  {title: "About Us", url: "/cms/pages/about"}, 
+                  {title: "For Developers", url: "/"}]
 navbar_entries.each do |entry|
   NavbarEntry.find_or_create_by(title: entry[:title]) do |rec|
     rec.url=entry[:url]

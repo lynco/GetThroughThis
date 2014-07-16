@@ -64,3 +64,6 @@ x.download_urls << DownloadUrl.new(url: 'http://www.link-sf.com/', link_type: 'W
 x=WebService.find_by_title('Aunt Bertha')
 x.download_urls.each { |du| du.delete }
 x.download_urls << DownloadUrl.new(url: 'http://www.auntbertha.com/', link_type: 'Website')
+x=WebService.find_by_title('California Victims Services (CalVCP)')
+x.download_urls.each { |du| du.delete }
+x.download_urls << DownloadUrl.new(url: 'http://vcgcb.ca.gov/victims/', link_type: 'Website')

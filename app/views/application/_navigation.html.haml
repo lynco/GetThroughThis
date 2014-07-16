@@ -2,7 +2,8 @@
   .container
     .navbar-header
       %a.navbar-brand{href: "/"} Get Through This
-    %ul.nav.navbar-nav.center-block
+    %ul.nav.navbar-nav.center-block.navbar-right
       - @navbar_entries.each do |entry|
         %li
           = link_to entry[:title], entry[:url]
+
