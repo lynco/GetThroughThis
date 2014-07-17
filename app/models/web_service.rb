@@ -18,10 +18,21 @@ class WebService < ActiveRecord::Base
   association_foreign_key: :second_web_service_id,
   after_add: :create_reverse_relation
 
+  def image_url
+    # Will return a default if none exists
+    if self.image and self.image.image_file.url 
+      self.image.image_file.url
+    else
+      "app-icon.jpg"
+    end
+  end
+  
   private
   def create_reverse_relation(related_service)
     unless WebServiceRelation.find_by first_web_service_id: related_service.id, second_web_service_id: self.id
       related_service.related_resources << self
     end
   end
+
+
 end

@@ -13,7 +13,6 @@
           .header.text-center
             = image_tag("filter-icon.png", class: "filter")
             Filter Results
-<<<<<<< HEAD
           = form_tag("/search", method: 'get') do
             = hidden_field_tag 'q', session[:search_query]
             .types
@@ -68,7 +67,7 @@
               .resource
                 .content
                   .icon
-                    = image_tag("app-icon.jpg", class: "img-responsive")
+                    = image_tag(rec.image_url, class: "img-responsive")
                   .copy
                     %h1 
                       = link_to rec.title, rec
