@@ -1,115 +1,101 @@
 .details {
   background-color: $offwhite2;
-}
 
-a.back {
-  color: $black;
-  font-size: 18px;
-  font-family: $primary-font;
-  font-weight: 300;
-  display: block;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  cursor: pointer;
-}
+  a.back {
+    @include headline-text(18px, 300);
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+  }
 
-a.back:hover {
-  text-decoration: none;
-}
+  h1 {
+    @include headline-text(25px, $color: $dark-blue);
+  }
 
+  .description, .content-box {
+    margin-top: 17px;
+    border: 1px solid $lol-grey7;
+  }
 
-a.back:active {
-  text-decoration: none;
-}
+  .description .copy {
+    background-color: #fff;
+    padding-top: 15px;
+    border-top: 4px solid $dark-blue;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+  }
 
-.details h1 {
-  color: $dark-blue;
-  font-size: 25px;
-  font-family: $primary-font;
-}
+  .description {
+    p {
+      @include primary-text(15px);
+    }
 
-.big-label {
-  font-size: 14px;
-}
-
-.details .description, .content-box {
-  margin-top: 17px;
-  border: 1px solid $lol-grey7;
-}
-
-.details .description .copy {
-  background-color: #fff;
-  padding-top: 15px;
-  border-top: 4px solid $dark-blue;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 35px;
-}
-
-.description p {
-  font-family: $primary-font;
-  font-size: 14px;
-  color: $black;
-  font-weight: 300;
-}
-
-.details .header {
-  padding-left: 10px;
-  margin-bottom: 0;
+    .details .header {
+      padding-left: 10px;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .content-box {
-  margin-bottom: 90px;
-}
-.content-box .copy {
-  background-color: #fff;
-  padding-top: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 35px;
+  @media (min-width: $screen-md-min) {
+    margin-bottom: 90px;
+  }
+
+  .icon {
+    padding: 0 15px;
+  }
+
+  .copy {
+    background-color: #fff;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+
+    p {
+      @include primary-text(15px);
+      margin-bottom: 15px;
+    }
+  }
 }
 
-.content-box .copy > p {
-  font-family: $primary-font;
-  font-size: 14px;
-  color: $black;
-  font-weight: 300;
-  margin-bottom: 15px;
-}
 
-.details .related {
+.related {
   border-top: 1px solid $lol-grey7;
   padding-top: 15px;
-  font-size: 12px;
+  @include primary-text(12px);
+
+  .label {
+    margin-left: 5px;
+  }
 }
 
-.related-resource .label {
-  margin-left: 5px;
-}
-.download:not(:last-child)  {
-  border-bottom: 1px solid $lol-grey7;
-}
-.download .icon {
-  float: left;
-  padding-top: 20px;
-  margin-right: 25px;
+
+.download {
+  h2 {
+    @include headline-text(14px, 700);
+    margin-top: 15px;
+  }
+
+  p {
+    @include primary-text(12px);
+    margin-bottom: 10px;
+  }
+
+  &:not(:last-child)  {
+    border-bottom: 1px solid $lol-grey7;
+  }
+
+  .icon {
+    float: left;
+    padding-top: 20px;
+  }
+
+  .copy {
+    display: inline-block;
+  }
 }
 
-.download .copy {
-  display: inline-block;
-}
-
-.download h2 {
-  margin-top: 15px;
-  font-family: $primary-font;
-  font-size: 14px;
-  font-weight: 700;
-  color: $black;
-}
-
-.download p {
-  margin-bottom: 10px;
-  color: $black;
-  font-family: $primary-font;
-  font-size: 12px!important;
-}

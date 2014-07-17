@@ -19,7 +19,7 @@ nav {
     font-family: $logo-font;
     font-size: 24px;
     font-weight: 700;
-    color: $grey;
+    color: $dark-grey;
     height: 27px;
     line-height: 0px;
     float: none!important;
@@ -56,9 +56,10 @@ nav {
     a {
       padding-top: 39px;
       padding-bottom: 25px;
-      color: $grey;
+      color: $dark-grey;
       font-family: $primary-font;
       font-size: 18px;
+      font-weight: 300;
       @media (max-width: $screen-sm-max) {
         font-size: 12px;
       }

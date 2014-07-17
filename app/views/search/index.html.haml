@@ -4,7 +4,7 @@
       %span 
         = @results.count
       resources found for
-    %span{class: "label search-label"} 
+    %span{class: "label search-label active-label"} 
       = session[:search_query]
     %hr
     .row
@@ -22,7 +22,7 @@
                 %input{type: "checkbox"} Web Resource
               %li
                 %input{type: "checkbox"} In-person Service
-          %span{class: "input-group-btn"}
+          %span{class: "input-group-btn text-center"}
             %button.btn.btn-primary Filter
         .configuration
           .header.text-center
@@ -31,7 +31,7 @@
           .bottom
             %p Are we missing something from these results?
             %p Suggest a resource to add.
-          %span{class: "input-group-btn"}
+          %span{class: "input-group-btn text-center"}
             %button.btn.btn-default Suggest
       .col-md-10
         .row
@@ -71,6 +71,7 @@
                       %span.more ... more
                     .labels 
                       - result.tags.each do |tag|
-                        %span{class: "label filter-label"} #{tag.name}
+                        %h5 
+                          %span{class: "label filter-label"} #{tag.name}
                 %p.read-more 
                   = link_to 'Read More', result

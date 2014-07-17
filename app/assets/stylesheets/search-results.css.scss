@@ -1,30 +1,19 @@
 .search {
   background-color: $offwhite2;
 
+  hr {
+    border-top: 1px solid $lol-grey7;
+  }
+
   h1 {
-    font-family: $primary-font;
-    font-size: 18px;
+    @include headline-text(18px);
     display: inline;
-    color: $black;
   }
 
   button {
-    margin-left: 37px!important;
     margin-bottom: 10px;
     width: 95px;
     border: none;
-  }
-
-  .configuration {
-    border: 1px solid $lol-grey7;
-    margin-bottom: 15px;
-    background-color: #fff;
-
-    p { 
-      font-family: $primary-font;
-      font-size: 10px;  
-      color: $black;
-    }
   }
 
   .mobile-configuration {
@@ -38,13 +27,13 @@
     }
 
     a {
-      font-family: $primary-font;
-      color: $dark-grey;
+      @include primary-text(16px);
     }
   }
 
   .container {
     padding-top: 35px; 
+    padding-bottom: 35px; 
   }
 
   .content {
@@ -55,44 +44,36 @@
       margin-top: 20px;
       display: inline-block;
       width: 70%;
+
+      p, .more {
+        @include primary-text(15px);
+        margin-top: 6px;
+      }
+
+      .more {
+        color: $dark-text;
+      }
     }
   }
 
-  .header {
-    text-transform: uppercase;
-    font-family: $logo-font;
-    font-size: 15px;
-    color: $dark-blue;
-    font-weight: 700;
-    background-color: $lol-grey5;
-    border-top: 4px solid $dark-blue;
-    padding-bottom: 7px;
-    padding-top: 4px;
-    margin-bottom: 10px;
-  }
 
   .filter {
     margin-bottom: 3px;
   }
 
-  .filter-label {
-    background-color: $lol-grey8;
+  .labels {
+    margin-bottom: 15px;
+
+    h5 {
+      display: inline;
+    }
   }
 
-  .tag-label {
-    background-color: $lol-grey4;
-  }
-
-  .search-label {
-    background-color: $lol-grey4;
-    font-family: $primary-font;
-    font-size: 15px
-  }
 
   .types, .bottom {
     margin-right: 14px;
     margin-bottom: 15px;
-    margin-left: 20px;
+    margin-left: 14px;
   }
 
   .bottom {
@@ -101,18 +82,13 @@
 
   .types {
     h4 {
-      font-family: $logo-font;
-      font-size: 15px;
-      color: $black;
+      @include header-text(15px, 400)     
     }
 
     ul {
-      margin-right: 10px;
+      @include primary-text(14px);
       padding-bottom: 15px;
       border-bottom: 1px solid $lol-grey5;
-      font-family: $primary-font;
-      font-size: 12px;
-      color: $black;
     }
 
     input {
@@ -121,22 +97,22 @@
   }
 
   .resource {
-    background-color: $lol-grey5;
+    background-color: $lol-grey9;
     border: 1px solid $lol-grey7;
     margin-bottom: 15px;
-
-    .more {
-      font-weight: 700;
-    }
 
     .read-more {
       margin-top: 8px;
       margin-left: 13px;
       text-transform: uppercase;
-      font-family: $logo-font;
-      font-size: 12px;
-      color: $dark-blue;
-      font-weight: 700;
+
+      a {
+        @include header-text(12px, $color: $dark-blue);
+
+        &:hover, &:focus {
+          @include header-text(12px, $color: $dark-blue);
+        }
+      }
     }
 
     .icon {
@@ -144,10 +120,6 @@
       margin-left: 8px;
       margin-right: 20px;
       float: left;
-    }
-
-    .labels {
-      margin-bottom: 15px;
     }
   }
 }
@@ -157,9 +129,46 @@ ul.dropdown-menu-form {
   max-height: 300px;
   overflow-y: scroll;
   min-width: 170px;
-  li { 
-    font-size: 12px;
-    font-weight: 400;
-    font-family: $primary-font;
+
+  liu{ 
+    @include primary-text(12px);
   }
+}
+
+.header {
+  @include header-text(15px, $color: $dark-blue);
+  text-transform: uppercase;
+  background-color: $lol-grey5;
+  border-top: 4px solid $dark-blue;
+  padding-bottom: 7px;
+  padding-top: 4px;
+  margin-bottom: 10px;
+}
+
+.configuration {
+  border: 1px solid $lol-grey7;
+  margin-bottom: 15px;
+  background-color: #fff;
+
+  p { 
+    @include primary-text(14px);
+  }
+}
+
+.label {
+  @include headline-text(inherit, $color: inherit);
+}
+
+.search-label, .active-label {
+  background-color: $lol-grey4;
+}
+
+.search-label {
+  @include headline-text(15px, $color: $light-text);
+}
+
+
+.filter-label {
+  background-color: $lol-grey9;
+  color: $reg-text;
 }

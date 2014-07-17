@@ -7,9 +7,7 @@
   }
 
   .headline {
-    font-family: $primary-font;
-    font-weight: 700;
-    font-size: 22px;
+    @include headline-text(22px);
 
     @media (min-width: $screen-sm-min) { 
       font-size: 27px;
@@ -24,15 +22,12 @@
     }
 
     label {
-      font-size: 18px;
-      font-family: $primary-font;
-      color: $lol-grey4;
-      font-weight: 400; 
+      @include headline-text(18px);
     }
 
     .form-control {
+      @include primary-text(18px);
       height: 42px;
-      font-size: 18px;
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
       border-radius: 0;
@@ -63,9 +58,7 @@
 
 .sample-apps {
   .heading {
-    font-family: $primary-font;
-    color: $lol-grey4;
-    font-size: 21px;
+    @include headline-text(21px);
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -113,37 +106,31 @@
     margin-right: 20px;
 
     @media (min-width: $screen-md-min) { 
-      padding-bottom: 75px;
+      padding-bottom: 20px;
     }
 
     .icon {
       padding-top: 20px;
-      padding-bottom: 20px;
+      padding-bottom: 5px;
     }
 
     .headline {
-      font-family: $logo-font;
-      color: $blue;
+      @include header-text(24px, 400, $blue);
       text-transform: uppercase;
-      font-weight: 700;
       margin-bottom: 25px;
     }
 
     .byline {
-      font-family: $primary-font;
-      color: $black;
-      font-size: 18px;
+      @include primary-text(18px);
       height: 125px;
       border-bottom: 1px solid $lol-grey6;
       margin-bottom: 8px;
     }
 
     .tag-text {
+      @include primary-text(14px);
       margin-top: 17px;
       margin-bottom: 17px;
-      font-size: 14px;
-      font-family: $primary-font;
-      color: $black;
     }
 
     .tags {
@@ -160,10 +147,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: $lol-blue;
-
-  h2 {
-    font-weight: 700;
-  }
 }
 
 .sponsors {

@@ -1,9 +1,35 @@
 $logo-font: 'Open Sans', sans-serif;
 $primary-font: 'Muli', sans-serif;
 $secondary-font: 'Oswald', sans-serif;
+
+$dark-text: #545455;
+$reg-text: #6c6d70;
+$light-text: #ffffff;
+
+@mixin header-text($size, $weight: 700, $color: $dark-text) {
+  font-family: $logo-font;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin headline-text($size, $weight: 400, $color: $dark-text) {
+  font-family: $primary-font;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin primary-text($size) {
+  font-family: $primary-font;
+  font-size: $size;
+  font-weight: 400;
+  color: $reg-text;
+}
+
+$dark-grey: #545455;
 $light-grey: #d4d4d4;
 $grey: #484849;
-$dark-grey: #545455;
 $offwhite: #fbfbfb;
 $offwhite2: #f8f6f6;
 $divider: #767373;
@@ -16,6 +42,7 @@ $lol-grey5: #e9ebeb;
 $lol-grey6: #bababa;
 $lol-grey7: #e3e4e5;
 $lol-grey8: #494a4c;
+$lol-grey9: #e9eaeb;
 $blue: #5db2e1;
 $dark-blue: #3c8ebc;
 $lol-blue: #99d9fc;
