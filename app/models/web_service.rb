@@ -18,6 +18,15 @@ class WebService < ActiveRecord::Base
   association_foreign_key: :second_web_service_id,
   after_add: :create_reverse_relation
 
+  def description_snippet
+    # Take the first 280 characters (Twitter times 2!) after removing all html, then remove trailing words.
+    x=self.description[0..285] # A fudge factor
+
+    x=x.gsub(/<\/?[a-zA-Z]+[^>]*>/, '')
+    x=x.gsub(/[^\s]+$/, '')
+    x
+  end
+
   def image_url
     # Will return a default if none exists
     if self.image and self.image.image_file.url 
