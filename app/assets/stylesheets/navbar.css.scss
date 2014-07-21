@@ -7,7 +7,7 @@ nav {
     text-align: center;
 
     @media (min-width: $screen-xs-max) {
-      padding-top: 30px;
+      padding-top: 20px;
     }
 
     @media (max-width: $screen-xs-max) {
@@ -54,7 +54,7 @@ nav {
     }
     
     a {
-      padding-top: 39px;
+      padding-top: 20px;
       padding-bottom: 25px;
       color: $dark-grey;
       font-family: $primary-font;

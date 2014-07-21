@@ -19,23 +19,26 @@
       .row.hidden-xs.hidden-sm
         .col-md-4
           .content
-            = image_tag("lifesaver-icon.png", class: "center-block icon")
-            %h3{class: "headline text-center"} Safety
+            = link_to("/tags/safety") do 
+              = image_tag("lifesaver-icon.png", class: "center-block icon")
+              %h3{class: "headline text-center"} Safety
             .hidden-xs
             %p{class: "byline"} When you’re in a bad or dangerous situation, grab your phone and access these resources to keep you and your loved ones safe.
             %span{class: "input-group-btn"}
               %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/safety"} Browse Safety Apps
         .col-md-4
           .content
-            = image_tag("firstaid-icon.png", class: "center-block icon")
-            %h3{class: "headline text-center"} Well-Being
+            = link_to("/tags/wellbeing") do 
+              = image_tag("firstaid-icon.png", class: "center-block icon")
+              %h3{class: "headline text-center"} Well-Being
             %p{class: "byline"} Your health and well-being are critical to recovery. Connect with resources to heal your mind and body both short- and long-term.
             %span{class: "input-group-btn"}
               %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/wellbeing"} Browse Health Services Apps
         .col-md-4
           .content
-            = image_tag("gavel-icon.png", class: "center-block icon")
-            %h3{class: "headline text-center"} Justice
+            = link_to("/tags/justice") do 
+              = image_tag("gavel-icon.png", class: "center-block icon")
+              %h3{class: "headline text-center"} Justice
             %p{class: "byline"} Navigating the legal system can be confusing, especially in a time of need. Browse resources to help you find a resolution.
             %span{class: "input-group-btn"}
               %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/justice"} Browse Legal Resources Apps
@@ -58,6 +61,40 @@
             %h3{class: "headline text-center"} Justice
             %span{class: "input-group-btn text-center"}
               %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/justice"} Browse Legal Resources Apps
+    .stats-block
+      .row
+        .col-lg-2
+        .col-lg-8.text-center
+          %h2 Crime and violence affects all of us, whether we realize it or not.
+        .col-lg-2
+      .row.stats-image-row
+        .col-lg-2
+        .col-lg-8
+          = image_tag('1-in-5-stat.png', class: 'img-responsive center-block')
+        .col-lg-2
+
+      .row
+        .col-lg-2
+        .col-lg-8.text-center
+          %h2 Get Through This exists to empower California families and communities during their recovery process.
+        .col-lg-2
+      .row.stats-image-row
+        .col-lg-2
+        .col-lg-8
+          = image_tag('2-in-3-stat.png', class: 'img-responsive center-block')
+        .col-lg-2
+
+      .row
+        .col-lg-2
+        .col-lg-8.text-center
+          %h2 By helping ourselves and our communities get through these experiences, we can prevent the experiences from defining us and our communities.
+        .col-lg-2
+      .row.stats-image-row
+        .col-lg-2
+        .col-lg-8
+          = image_tag('cycle-stat.png', class: 'img-responsive center-block')
+        .col-lg-2
+
 .info
   .container
     .rows
