@@ -10,6 +10,7 @@
 
   .headline {
     @include headline-text(22px);
+    line-height: 120%;
 
     @media (min-width: $screen-sm-min) { 
       font-size: 27px;
@@ -20,6 +21,7 @@
     font-size: 21px;
     font-weight: 400;
     color: $lol-grey4;
+    line-height: 140%;
   }
 
   .search-form {
@@ -68,6 +70,7 @@
     @include headline-text(21px);
     margin-top: 15px;
     margin-bottom: 15px;
+    line-height: 140%;
   }
 
   .heading-row {
@@ -130,7 +133,7 @@
       @include primary-text(18px);
       height: 125px;
       border-bottom: 1px solid $lol-grey6;
-      margin-bottom: 8px;
+      margin-bottom: 30px;
     }
 
     .tag-text {
@@ -149,33 +152,33 @@
   }
 }
 
-.stats-block {
-    margin-bottom: 60px;
-    .row {
-	background-color: $lol-blue;
-    }
-    h2 {
-	font-size: 21px;
-	font-weight: 400;
-	color: $lol-grey4;
-    }
-    
-    .stats-image-row {
-	padding-bottom: 25px;
-    }
-}
-
 .info {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 90px;
   background-color: $lol-blue;
+  margin-top: 70px;
+
+  h2 {
+    @include headline-text(21px);
+    margin-top: 70px;
+    margin-bottom: 50px;
+    line-height: 140%;
+  }
+
+  img {
+    width: 30%;
+  }
 }
 
 .sponsors {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: $blue;
   border-bottom: 4px solid $offwhite;
+  
+  img {
+    width: 35%;
+  }
 }
 
 .separator {
