@@ -7,4 +7,16 @@
           .copy
             .para
               = raw(@page_content[:main_content])
+      .col-lg-4.col-md-4.col-sm-4.col-xs-12.big-font
+        .description
+          .copy
+            - if @page_content[:show_form] == 'developer'
+              %form{role: 'form', class: 'developer-submit'}
+                %label{for: 'dev-email'} Have an app to show us? Get in touch!
+                %input{type: 'hidden', id: 'list_id', value: ENV['mc_developer_list_id']}
+                %input{id: 'emailaddress', placeholder: 'Your email, Twitter handle, etc.'}
+                %input{id: 'app_link', placeholder: 'Location of your app (optional)'}
+                %textarea{rows: 3, id: 'app_link', placeholder: 'Comments?'}
+                .form-btn#trigger
+                  %button{class: "btn btn-default", type: "button"} Call me
 

@@ -65,18 +65,12 @@ footer {
 	  font-weight: 400; 
       }
 
-      input {
+      input, textarea {
 	  min-width: 65%;
+	  padding-top: 5px;
+      }
+      input {
 	  height: 47px;
-	  font-size: 15px;
-	  -webkit-border-radius: 0;
-	  -moz-border-radius: 0;
-	  border-radius: 0;
-	  box-shadow: none;
-	  border: 1px solid $lol-grey2;
-	  background-color: $lol-grey3;
-	  color: black;
-	  padding-left: 5px;
       }
       #trigger {
 	  min-width: 35%;
