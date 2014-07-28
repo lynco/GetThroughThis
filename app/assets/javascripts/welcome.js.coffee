@@ -23,7 +23,7 @@ $ ->
 
 $ -> 
   $(document).on("click", ->
-    if $("input").is(":focus")
+    if $("input").is(":focus") || $("textarea").is(":focus")
       $(".comments-section").show()
     else
       $(".comments-section").hide()
@@ -32,23 +32,11 @@ $ ->
   null
 
 $ ->
-  $("#trigger button").click( ->
-    post_data = {}
-    $.map($(".call-to-action input"), (i) ->
-      post_data[$(i).attr("id")] = $(i).val()
-    )
-
-    # Disable it
-    $("#trigger button").attr("disabled", "disabled");
-    $("#trigger button").html("Subscribing ...");
-
-    
-    jQuery.post('/list_entries', post_data).done((data) ->
-      $("#trigger button").html("Thanks for your support!");
-      $(".call-to-action #trigger").css("float", "left");
-      $(".call-to-action input").hide();
-    )
+  $(".call-to-action #trigger button").click( (e) ->
+    window.do_mc_call("call-to-action", "Subscribing ...", "Thanks for your support!")
+    $(".call-to-action #trigger").css("float", "left")
     null
   )
-  null
+    
+
 
