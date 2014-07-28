@@ -27,7 +27,7 @@ class ListEntriesController < ApplicationController
       @mc_error = "The list could not be found."
     rescue Mailchimp::Error => ex
       if ex.message
-        @mc_error = ex.message
+        @mc_error = "Error: #{ex.message}"
       else
         @mc_error = "An unknown error occurred."
       end
