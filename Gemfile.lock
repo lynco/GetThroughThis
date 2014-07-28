@@ -42,8 +42,6 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
     bcrypt (3.1.7)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
     builder (3.2.2)
@@ -102,6 +100,7 @@ GEM
       mail (~> 2.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    excon (0.38.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
@@ -150,6 +149,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailchimp-api (2.0.5)
+      excon (>= 0.16.0)
+      json (>= 1.7.7)
     mime-types (1.25.1)
     mini_portile (0.6.0)
     minitest (5.3.5)
@@ -344,6 +346,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
+  mailchimp-api
   paperclip
   pg
   rails (~> 4)

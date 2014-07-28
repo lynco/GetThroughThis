@@ -46,13 +46,11 @@
    border-bottom: 4px solid $dark-orange;
 }
 
-.btn-default:after {
-   content: " ";
-   position: absolute;
-   z-index: 0;
-   top: 0px;
-   left: 0px;
-   right: 0px;
-   bottom: 0px;
-   border-bottom: 4px solid $dark-blue;
+.btn.disabled, .btn[disabled] {
+   opacity: inherit;
+   background-color: $blue;
+}
+
+.btn {
+    border-bottom: 0px;
 }

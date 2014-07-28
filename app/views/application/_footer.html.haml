@@ -8,11 +8,12 @@
           %li= link_to 'Get Involved', '#'
       .col-md-1.col-sm-1.hidden-xs
         .vertical-rule
-      .col-md-4.col-sm-8.col-xs-12
+      .col-md-4.col-sm-8.col-xs-12.call-to-action#call-to-action
         %form{role: "form", class: "call-to-action"}
-          .form-group
+          .form-inputs
             %label{for: "get-involved"} Learn how to get involved
-            .input-group
-              %input{name: "get-involved", type: "text", class: "form-control", placeholder: "Email address"}
-              %span{class: "input-group-btn"}
-                %button{class: "btn btn-default", type: "button"} Count Me In
+            %input{name: "get-involved", id: "emailaddress", type: "text", placeholder: "Email address"}
+            %input{class: 'comments-section', placeholder: "Comments?", type: 'textbox', rows: 3, id: 'subscriber_comments'}
+            .form-btn#trigger
+              %button{class: "btn btn-default", type: "button"} Count Me In
+

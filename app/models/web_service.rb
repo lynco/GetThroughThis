@@ -19,8 +19,8 @@ class WebService < ActiveRecord::Base
   after_add: :create_reverse_relation
 
   def description_snippet
-    # Take the first 280 characters (Twitter times 2!) after removing all html, then remove trailing words.
-    x=self.description[0..285] # A fudge factor
+    # Take the first 224 characters after removing all html, then remove trailing words.
+    x=self.description[0..229] # A fudge factor
 
     x=x.gsub(/<\/?[a-zA-Z]+[^>]*>/, '')
     x=x.gsub(/[^\s]+$/, '')

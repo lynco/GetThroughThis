@@ -7,6 +7,7 @@ GetThroughThis::Application.routes.draw do
   resources :users, path: 'profiles'
   resources :search
   resources :tags, only: [:show]
+  resources :list_entries
 
   root to: 'welcome#index'
   get "about" => "welcome#about"

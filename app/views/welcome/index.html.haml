@@ -25,7 +25,7 @@
             .hidden-xs
             %p{class: "byline"} When you’re in a bad or dangerous situation, grab your phone and access these resources to keep you and your loved ones safe.
             %span{class: "input-group-btn text-center"}
-              %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/safety"} Browse Safety Apps
+              %button{class: "btn tag-btn btn-primary", type: "button", "data-target" => "/tags/safety"} Browse Safety Apps
         .col-md-4
           .content
             = link_to("/tags/wellbeing") do 
@@ -33,7 +33,7 @@
               %h3{class: "headline text-center"} Well-Being
             %p{class: "byline"} Your health and well-being are critical to recovery. Connect with resources to heal your mind and body both short- and long-term.
             %span{class: "input-group-btn text-center"}
-              %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/wellbeing"} Browse Health Services Apps
+              %button{class: "btn tag-btn btn-primary", type: "button", "data-target" => "/tags/wellbeing"} Browse Health Services Apps
         .col-md-4
           .content
             = link_to("/tags/justice") do 
@@ -41,26 +41,26 @@
               %h3{class: "headline text-center"} Justice
             %p{class: "byline"} Navigating the legal system can be confusing, especially in a time of need. Browse resources to help you find a resolution.
             %span{class: "input-group-btn text-center"}
-              %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/justice"} Browse Legal Resources Apps
+              %button{class: "btn tag-btn btn-primary", type: "button", "data-target" => "/tags/justice"} Browse Legal Resources Apps
       .row.hidden-md.hidden-lg
         .col-xs-12.col-sm-4
           .content
             = image_tag("lifesaver-icon.png", class: "center-block icon")
             %h3{class: "headline text-center"} Safety
             %span{class: "input-group-btn text-center"}
-              %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/safety"} Browse Safety
+              %button{class: "btn tag-btn btn-primary", type: "button", "data-target" => "/tags/safety"} Browse Safety
         .col-xs-12.col-sm-4
           .content
             = image_tag("firstaid-icon.png", class: "center-block icon")
             %h3{class: "headline text-center"} Well-Being
             %span{class: "input-group-btn text-center"}
-              %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/wellbeing"} Browse Health
+              %button{class: "btn tag-btn btn-primary", type: "button", "data-target" => "/tags/wellbeing"} Browse Health
         .col-xs-12.col-sm-4
           .content.center-block
             = image_tag("gavel-icon.png", class: "center-block icon")
             %h3{class: "headline text-center"} Justice
             %span{class: "input-group-btn text-center"}
-              %button{class: "btn btn-primary", type: "button", "data-target" => "/tags/justice"} Browse Legal
+              %button{class: "btn tag-btn btn-primary", type: "button", "data-target" => "/tags/justice"} Browse Legal
 .info
   .container
     .rows

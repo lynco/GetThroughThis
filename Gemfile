@@ -95,3 +95,6 @@ gem 'paperclip'
 # S3
 gem 'aws-sdk'
 
+# mailchimp
+gem 'mailchimp-api'
+
