@@ -14,7 +14,9 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require underscore
-//= require gmaps/google
+//= require jquery.address
+//= require jquery.geocomplete.min
+//= require maps_lib
 //= require_tree .
 
 $('.dropdown-menu').on('click', function(e) {

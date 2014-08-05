@@ -1,0 +1,24 @@
+.container
+  %p
+    .well
+      #results_list
+
+  %p
+    .well
+      %h4 
+        Address 
+        %small 
+          (
+          %a#find_me{href: '#'} find me
+          )
+      %p
+        %input.form-control#search_address{placeholder: 'Enter an address or an intersection', type: 'text'}
+      %a.btn#map_search_button{href: '#'}
+        %i.glyphicon.glyphicon-search Search
+
+  #map_canvas
+  %p.pull-right
+    Credit: 
+    %a{href: 'http://derekeder.com'} Derek Eder's
+    %a{href: 'http://derekeder.com/searchable_map_template/'} Searchable Map Template
+

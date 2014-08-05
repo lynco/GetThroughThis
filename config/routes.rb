@@ -13,6 +13,8 @@ GetThroughThis::Application.routes.draw do
   get "about" => "welcome#about"
 
   get "/search" => "search#results"
+  get "/map" => "maps#draw"
+
   namespace :cms do
     get "/pages/(:id)/(:template)/(:layout)" => "pages#show"
   end
