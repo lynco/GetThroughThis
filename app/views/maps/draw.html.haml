@@ -1,10 +1,6 @@
 .container
   %p
     .well
-      #results_list
-
-  %p
-    .well
       %h4 
         Address 
         %small 
@@ -15,6 +11,20 @@
         %input.form-control#search_address{placeholder: 'Enter an address or an intersection', type: 'text'}
       %a.btn#map_search_button{href: '#'}
         %i.glyphicon.glyphicon-search Search
+
+  %p 
+    %h4 Select a service county
+      
+    %select#svc_area_select
+      %option{value: '', selected: 'true'} All
+      %option{value: '1'} Alameda
+      %option{value: '2'} San Francisco
+      %option{value: '3'} San Jose
+      %option{value: '4'} San Mateo
+
+  %p
+    .well
+      #results_list
 
   #map_canvas
   %p.pull-right
