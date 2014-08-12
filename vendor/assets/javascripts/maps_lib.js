@@ -92,10 +92,10 @@ var MapsLib = {
     var whereClause = MapsLib.locationColumn + " not equal to ''";
 
     //-----custom filters-------
-      var svc_area = {1: 'Alameda', 2: 'San Francisco', 3: 'San Jose', 4: 'San Mateo'}
+      var svc_area = {1: 'Alameda County', 2: 'San Francisco County', 3: 'Santa Clara County', 4: 'San Mateo County'}
       if ($("#svc_area_select").val() != '') {
 	  MapsLib.searchQuerySupplied=true;
-	  whereClause += " AND 'service_area' = '" + svc_area[$("#svc_area_select").val()] + "'";
+	  whereClause += " AND 'service_area' CONTAINS '" + svc_area[$("#svc_area_select").val()] + "'";
       }
 
     //-------end of custom filters--------
