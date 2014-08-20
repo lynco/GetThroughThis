@@ -1,6 +1,8 @@
 module SearchHelper
   def highlight_label_with_query(token, query)
-    if /#{query}/.match token
+    # This is optimized for behaving well with the multiple tags scenario, rather than to highlight partial query matches 
+    # in a tag.
+    if /#{token}/.match query
       'filter-label'
     else
       'tag-label'
