@@ -35,15 +35,27 @@
   border-color: $lol-grey3; 
 }
 
-.btn-primary:after {
+@mixin btn-primary-basics() {
    content: " ";
    position: absolute;
    z-index: 0;
+   border-bottom: 4px solid $dark-orange;
+}
+
+.btn-primary:after {
+    @include btn-primary-basics();
    top: 0px;
    left: 0px;
    right: 0px;
    bottom: 0px;
-   border-bottom: 4px solid $dark-orange;
+}
+
+#search .btn-primary:after {
+    @include btn-primary-basics();
+    top: 0px;
+    left: 1px;
+    right: 7px;
+    bottom: -10px;
 }
 
 .btn.disabled, .btn[disabled] {

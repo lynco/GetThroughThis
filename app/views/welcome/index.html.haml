@@ -6,24 +6,17 @@
       .col-md-6
         %h1.headline If you or a loved one survived a crime or traumatic event, here's one place for all the right resources.
 
-        %form{role: "form", class: "search-form", action: "/search", method: "get"}
-          .form-group
-            %label{for: "info-about"} I need information about...
-            .input-group.left-inner-addon
-              %i{class: "glyphicon glyphicon-search"}
-              %input{name: "q", type: "text", class: "form-control"}
-              %span{class: "input-group-btn"}
-                %button{class: "btn btn-primary", type: "button"} Help Me Out
-            .input-group
-              Try these queries: 
-              = link_to("A Search", '#') + ", " + link_to("Another Search", '#') + ", "
-              %span.dropdown
-                %button.btn-default.dropdown-toggle#dropdownMenu1{type: "button", 'data-toggle' => 'dropdown'}
-                  More...
-                %ul.dropdown-menu{role: 'menu'}
-                  %li.presentation
-                    = link_to "Yet more search", '#'
-                  
+        .medium-size I need information about ...
+        .medium-size 
+          #{link_to("A Search", '#') + ", " + link_to("Another Search", '#')}
+          %span.dropdown
+            %button.btn.btn-primary.dropdown-toggle#dropdownMenu1{type: "button", 'data-toggle' => 'dropdown'}
+              More... 
+              %i{class: "glyphicon glyphicon-chevron-down"}
+            %ul.dropdown-menu{role: 'menu'}
+              %li.presentation
+                = link_to "Yet more search", '#'
+                
 .sample-apps
   .container
     .row.heading-row

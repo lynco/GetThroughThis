@@ -18,11 +18,13 @@
   }
 
   h2 {
-    font-size: 21px;
-    font-weight: 400;
-    color: $lol-grey4;
+    @include headline-text(21px, 400, $lol-grey4);
     line-height: 140%;
   }
+  .medium-size {
+    @include headline-text(21px, 400, $lol-grey4);
+    line-height: 200%;
+  }     
 
   .search-form {
     padding-top: 20px;
