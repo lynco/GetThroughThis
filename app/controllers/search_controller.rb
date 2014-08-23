@@ -2,6 +2,7 @@ class SearchController < ApplicationController
   def index
     session[:search_route] = "/search?q=#{params[:q]}"
     session[:search_query] = params[:q]
+    session[:search_query_display] = session[:search_query]
 
     resp = WebService.search query: {match: {_all: params[:q] } },
     highlight: { fields: {title: {}, description: {} } }

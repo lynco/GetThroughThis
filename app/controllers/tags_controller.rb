@@ -7,13 +7,16 @@ class TagsController < ApplicationController
     no_tag=true
     tgs = []
 
+    str_t = ''
     tag_list.each do |t|
+      str_t += "#{t}, "
       tg = Tag.find_by_name t
       if tg then
         tgs << tg 
         no_tag=false
       end
     end
+    session[:search_query_display] = str_t.gsub(/, $/, '')
 
     # At least one tag must be valid
     raise ActionController::RoutingError, "Tag in search query unknown" if no_tag
@@ -23,7 +26,6 @@ class TagsController < ApplicationController
 
     @records = []
     tgs.each do |tg|
-      puts ">>> listing ws for #{tg}"
       @records |= tg.web_services
     end
 
