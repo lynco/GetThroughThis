@@ -20,7 +20,7 @@ class WebService < ActiveRecord::Base
 
   def description_snippet
     # Take the first 224 characters after removing all html, then remove trailing words.
-    x=self.description[0..229] # A fudge factor
+    x=self.description[0..200] # A fudge factor
 
     x=x.gsub(/<\/?[a-zA-Z]+[^>]*>/, '')
     x=x.gsub(/[^\s]+$/, '')

@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  include FiltersHelper
+
   def show
     # Support multiple tag names separated by + signs, as an OR operation
 
@@ -22,15 +24,18 @@ class TagsController < ApplicationController
     raise ActionController::RoutingError, "Tag in search query unknown" if no_tag
 
     session[:search_query] = params[:id]
-    session[:search_route] = "/tags/#{params[:id]}"
-
+    @form_route = session[:search_route] = "/tags/#{params[:id]}"
+    
     @records = []
     tgs.each do |tg|
       @records |= tg.web_services
     end
 
-    # Hack: if this is nil, there are no search results expected.
-    @results = nil
+    if (filters=params[:query_service_mode_filter]) then      
+      filters = [filters] if filters and filters.class != Array # Make it an array if there was only one filter
+      @filters=filters
+      @records = run_filters @records, filters
+    end
 
     render "search/index"
   end

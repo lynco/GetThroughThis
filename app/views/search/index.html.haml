@@ -13,7 +13,7 @@
           .header.text-center
             = image_tag("filter-icon.png", class: "filter")
             Filter Results
-          = form_tag("/search", method: 'get') do
+          = form_tag(@form_route, method: 'get') do
             = hidden_field_tag 'q', session[:search_query]
             .types
               %h4 Type

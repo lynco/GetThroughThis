@@ -16,5 +16,4 @@ module SearchHelper
       false
     end
   end
-  
 end
