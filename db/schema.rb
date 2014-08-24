@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140725235950) do
+ActiveRecord::Schema.define(version: 20140824021916) do
 
   create_table "download_urls", force: true do |t|
     t.string  "url"
@@ -69,6 +69,14 @@ ActiveRecord::Schema.define(version: 20140725235950) do
     t.string "template"
     t.string "layout"
     t.string "slug"
+  end
+
+  create_table "search_dropdowns", force: true do |t|
+    t.string   "shown_query"
+    t.string   "ran_query"
+    t.string   "ran_query_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "service_use_modes", force: true do |t|

@@ -15,7 +15,7 @@
             %ul.dropdown-menu{role: 'menu'}
               - @welcome_dropdowns.each do |d_item|
                 %li.presentation
-                  = link_to d_item[:text], "/tags/#{d_item[:tags]}", role: 'menuitem'
+                  = link_to d_item[:text], "/tags/#{d_item[:machine_query]}", role: 'menuitem'
                 
 .sample-apps
   .container

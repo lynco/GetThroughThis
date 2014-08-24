@@ -1,7 +1,8 @@
-tag_names = %w(safety justice wellbeing trauma stress ptsd)
+tag_names = %w(safety justice wellbeing trauma stress ptsd volunteer recovery)
 tag_names.each do |t_name|
   Tag.find_or_create_by(name: t_name) do |t|
     t.slug="/#{t_name}"
+    t.save
   end
 end
 
@@ -19,13 +20,13 @@ relationships =
   '1800 Victims' => {rr: ['California Victims Services (CalVCP)', 'RAINN'], tags: ['justice', 'ptsd', 'stress', 'trauma'], st: ['app']},
   'Crime Push' => {rr: ['Live Safe', 'Guardly', 'bSafe', 'OnWatch', 'Watch Over Me'], tags: ['safety', 'justice', 'stress', 'trauma'], st: ['app']},
   'Live Safe' => {rr: ['Crime Push', 'Guardly', 'bSafe', 'OnWatch', 'Watch Over Me'], tags: ['safety', 'justice'], st: ['app']},
-  'Vine Link' => {rr: ['Crime Push', 'Live Safe'], tags: ['justice'], st: ['app']},
+  'Vine Link' => {rr: ['Crime Push', 'Live Safe'], tags: ['recovery', 'justice'], st: ['app']},
   'California Victims Services (CalVCP)' => {rr: ['RAINN', '1800 Victims'], tags: ['justice', 'ptsd', 'stress', 'trauma'], st: ['app']},
   'RAINN' => {rr: ['1800 Victims', 'California Victims Services (CalVCP)'],  tags: ['justice', 'ptsd', 'stress', 'trauma'], st: ['app']},
-  'DoD Safe Helpline' => {rr: ['PTSD Coach', 'Aunt Bertha'],  tags: ['wellbeing', 'ptsd', 'stress', 'trauma'], st: ['app']},
-  'PTSD Coach' => {rr: ['Homeless REACH'], tags: ['wellbeing', 'ptsd'], st: ['app']},
-  'Homeless REACH' => {rr: ['Link SF', 'Safe Night'], tags: ['wellbeing', 'ptsd', 'stress', 'trauma'], st: ['app']},
-  'Safe Night' => {rr: ['Link SF', 'Homeless REACH'], tags: ['wellbeing'], st: ['app']},
+  'DoD Safe Helpline' => {rr: ['PTSD Coach', 'Aunt Bertha'],  tags: ['recovery', 'wellbeing', 'ptsd', 'stress', 'trauma'], st: ['app']},
+  'PTSD Coach' => {rr: ['Homeless REACH'], tags: ['wellbeing', 'volunteer', 'ptsd'], st: ['app']},
+  'Homeless REACH' => {rr: ['Link SF', 'Safe Night'], tags: ['volunteer', 'wellbeing', 'ptsd', 'stress', 'trauma'], st: ['app']},
+  'Safe Night' => {rr: ['Link SF', 'Homeless REACH'], tags: ['wellbeing', 'volunteer'], st: ['app']},
   'Link SF' => {rr: ['Safe Night', 'Homeless REACH', 'Aunt Bertha'], tags: ['wellbeing', 'ptsd', 'stress', 'trauma'], st: ['app']},
   'Aunt Bertha' => {rr: ['Safe Night', 'Homeless REACH', 'Aunt Bertha', 'Link SF'], tags: ['ptsd', 'stress', 'trauma']}
 }
