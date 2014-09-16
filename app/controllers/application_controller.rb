@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
 
   def create_navbar_data
     @navbar_entries = NavbarEntry.all.map do |entry|
-      {title: entry.title, url: entry.url }
+      {title: entry.title, url: entry.url, is_mobile: entry.is_mobile }
     end
   end
 

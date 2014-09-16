@@ -4,6 +4,6 @@
       %a.navbar-brand{href: "/"} Get Through This
     %ul.nav.navbar-nav.center-block.navbar-right
       - @navbar_entries.each do |entry|
-        %li
+        %li{'class' => mobile_hide(entry)}
           = link_to entry[:title], entry[:url]
 
