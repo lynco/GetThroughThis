@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   end
 
   def create_navbar_data
-    @navbar_entries = NavbarEntry.all.map do |entry|
+    @navbar_entries = NavbarEntry.all.order(:id).map do |entry|
       {title: entry.title, url: entry.url, is_mobile: entry.is_mobile }
     end
   end
